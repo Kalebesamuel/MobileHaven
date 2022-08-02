@@ -267,6 +267,33 @@ const Mac = () => {
                     }
                   />
                 </div>
+                <div id="installer">
+                  <h7 class="font-weight-bold" ref={refApplications}>
+                    Instalação Inicial
+                  </h7>
+                  <p style={styles.itemText}>
+                    Após ter feito toda configuração das variáveis de ambiente,
+                    abre o terminal(na pasta raiz do projeto) e execute o o
+                    seguinte comando para a instalação e atualização dos
+                    pacotes:
+                  </p>
+                  <SyntaxHighlighter
+                    language="bash"
+                    style={a11yDark}
+                    PreTag="div"
+                    children={CodeExamples.commandBasic}
+                  />
+                  <p style={styles.itemText}>
+                    Concluído a instalação dos pacotes, execute o comando abaixo
+                    para startar o server:
+                  </p>
+                  <SyntaxHighlighter
+                    language="bash"
+                    style={a11yDark}
+                    PreTag="div"
+                    children={CodeExamples.startServer}
+                  />
+                </div>
               </CardBody>
             </Card>
           </Col>
