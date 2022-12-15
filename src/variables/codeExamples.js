@@ -1,4 +1,10 @@
 const CodeExamples = {
+  commandBasic: `
+    npm install
+  `,
+  startServer: `
+    npm start
+  `,
   badP1: `
         if (parada.TPPARADA == 1){
             ...

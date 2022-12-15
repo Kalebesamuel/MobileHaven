@@ -401,7 +401,15 @@ function Windows() {
                           Evolog Motorista
                         </a>
                       </li>
-
+                      <li class="list-group-item">
+                        <a
+                          class="list-group-item-text"
+                          className="text-muted"
+                          href="https://bitbucket.org/bravolinos/evolog-driver/src/master/"
+                        >
+                          Evolog Motorista Lite
+                        </a>
+                      </li>
                       <li class="list-group-item">
                         <a
                           class="list-group-item-text"
@@ -426,12 +434,47 @@ function Windows() {
                         <a
                           class="list-group-item-text"
                           className="text-muted"
+                          href="https://bitbucket.org/bravolinos/app_checkin/src/master"
+                        >
+                          Evolog Checkin
+                        </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a
+                          class="list-group-item-text"
+                          className="text-muted"
                           href="https://bitbucket.org/bravolinos/app_canhoto/src/master/"
                         >
                           Evolog Canhoto
                         </a>
                       </li>
-
+                      <li class="list-group-item">
+                        <a
+                          class="list-group-item-text"
+                          className="text-muted"
+                          href="https://bitbucket.org/bravolinos/app_eva/src/master"
+                        >
+                          Evolog Eva
+                        </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a
+                          class="list-group-item-text"
+                          className="text-muted"
+                          href="https://bitbucket.org/bravolinos/app_flg/src/master/"
+                        >
+                          Evolog FLG
+                        </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a
+                          class="list-group-item-text"
+                          className="text-muted"
+                          href="https://bitbucket.org/bravolinos/app_horacerta/src/master/"
+                        >
+                          Evolog Hora Certa
+                        </a>
+                      </li>
                       <li class="list-group-item">
                         <a
                           class="list-group-item-text"
@@ -485,6 +528,22 @@ function Windows() {
                         children={
                           "npm i -g react-native-cli \nnpm i -g nodemon"
                         }
+                      />
+                    </pre>
+                  </div>
+                  <div class="pl-3 mt-4">
+                    <p class="text-muted">
+                      7. Após os comandos acima executados. Abre o terminal do
+                      app-server(raíz do projeto) e roda o comando abaixo para
+                      startar o servidor:
+                    </p>
+
+                    <pre>
+                      <SyntaxHighlighter
+                        language="js"
+                        style={a11yDark}
+                        PreTag="div"
+                        children={"npm start"}
                       />
                     </pre>
                   </div>
