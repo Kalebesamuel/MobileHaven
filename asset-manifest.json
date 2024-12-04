@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/MobileHaven/static/css/main.7d378abe.chunk.css",
-    "main.js": "/MobileHaven/static/js/main.20661bf4.chunk.js",
-    "main.js.map": "/MobileHaven/static/js/main.20661bf4.chunk.js.map",
+    "main.css": "/MobileHaven/static/css/main.327c8868.chunk.css",
+    "main.js": "/MobileHaven/static/js/main.a3fb7483.chunk.js",
+    "main.js.map": "/MobileHaven/static/js/main.a3fb7483.chunk.js.map",
     "runtime-main.js": "/MobileHaven/static/js/runtime-main.414fa124.js",
     "runtime-main.js.map": "/MobileHaven/static/js/runtime-main.414fa124.js.map",
-    "static/css/2.395b37e6.chunk.css": "/MobileHaven/static/css/2.395b37e6.chunk.css",
-    "static/js/2.14d6c250.chunk.js": "/MobileHaven/static/js/2.14d6c250.chunk.js",
-    "static/js/2.14d6c250.chunk.js.map": "/MobileHaven/static/js/2.14d6c250.chunk.js.map",
+    "static/css/2.286fe502.chunk.css": "/MobileHaven/static/css/2.286fe502.chunk.css",
+    "static/js/2.7b3e445f.chunk.js": "/MobileHaven/static/js/2.7b3e445f.chunk.js",
+    "static/js/2.7b3e445f.chunk.js.map": "/MobileHaven/static/js/2.7b3e445f.chunk.js.map",
     "index.html": "/MobileHaven/index.html",
-    "precache-manifest.fe6cdc1590b5b246472ab9ca05ea3c4c.js": "/MobileHaven/precache-manifest.fe6cdc1590b5b246472ab9ca05ea3c4c.js",
+    "precache-manifest.707790f8a7f3c6eac1e08ed3215106f0.js": "/MobileHaven/precache-manifest.707790f8a7f3c6eac1e08ed3215106f0.js",
     "service-worker.js": "/MobileHaven/service-worker.js",
-    "static/css/2.395b37e6.chunk.css.map": "/MobileHaven/static/css/2.395b37e6.chunk.css.map",
-    "static/css/main.7d378abe.chunk.css.map": "/MobileHaven/static/css/main.7d378abe.chunk.css.map",
-    "static/js/2.14d6c250.chunk.js.LICENSE.txt": "/MobileHaven/static/js/2.14d6c250.chunk.js.LICENSE.txt",
-    "static/js/main.20661bf4.chunk.js.LICENSE.txt": "/MobileHaven/static/js/main.20661bf4.chunk.js.LICENSE.txt",
+    "static/css/2.286fe502.chunk.css.map": "/MobileHaven/static/css/2.286fe502.chunk.css.map",
+    "static/css/main.327c8868.chunk.css.map": "/MobileHaven/static/css/main.327c8868.chunk.css.map",
+    "static/js/2.7b3e445f.chunk.js.LICENSE.txt": "/MobileHaven/static/js/2.7b3e445f.chunk.js.LICENSE.txt",
+    "static/js/main.a3fb7483.chunk.js.LICENSE.txt": "/MobileHaven/static/js/main.a3fb7483.chunk.js.LICENSE.txt",
     "static/media/AnalyticsEvents.png": "/MobileHaven/static/media/AnalyticsEvents.9670a67b.png",
     "static/media/AnalyticsLogFlow.png": "/MobileHaven/static/media/AnalyticsLogFlow.6a4a4c1f.png",
     "static/media/AnalyticsOverview.png": "/MobileHaven/static/media/AnalyticsOverview.befbd275.png",
@@ -54,6 +54,7 @@
     "static/media/creatingEnvironmentVariables.png": "/MobileHaven/static/media/creatingEnvironmentVariables.b0fef667.png",
     "static/media/creating_repository_img1.png": "/MobileHaven/static/media/creating_repository_img1.736a0091.png",
     "static/media/creating_repository_img2.png": "/MobileHaven/static/media/creating_repository_img2.dd617a29.png",
+    "static/media/developmentMat.png": "/MobileHaven/static/media/developmentMat.ecebdb34.png",
     "static/media/enablingPipeline.png": "/MobileHaven/static/media/enablingPipeline.383cd885.png",
     "static/media/environmentsReactNative.png": "/MobileHaven/static/media/environmentsReactNative.92f5c440.png",
     "static/media/fastlane-android-questions-2.png": "/MobileHaven/static/media/fastlane-android-questions-2.0b278564.png",
@@ -73,9 +74,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.414fa124.js",
-    "static/css/2.395b37e6.chunk.css",
-    "static/js/2.14d6c250.chunk.js",
-    "static/css/main.7d378abe.chunk.css",
-    "static/js/main.20661bf4.chunk.js"
+    "static/css/2.286fe502.chunk.css",
+    "static/js/2.7b3e445f.chunk.js",
+    "static/css/main.327c8868.chunk.css",
+    "static/js/main.a3fb7483.chunk.js"
   ]
 }
