@@ -54,6 +54,7 @@ import Logica from "./views/Help/Logica.js";
 import Flatlist from "./views/Help/Flatlist.js";
 import Camera from "./views/Help/Camera.js";
 import Axios from "./views/Help/Axios.js";
+import Hooks from "./views/Help/Hooks.js";
 
 var dashRoutes = [
   {
@@ -245,6 +246,12 @@ var dashRoutes = [
         path: "/help/Axios",
         name: "Axios",
         component: Axios,
+        layout: "/admin",
+      },
+      {
+        path: "/help/Hooks",
+        name: "Hooks",
+        component: Hooks,
         layout: "/admin",
       },
     ],
@@ -637,6 +644,13 @@ var dashRoutes = [
     path: "/help/Axios",
     name: "Axios",
     component: Axios,
+    layout: "/admin",
+    invisible: true,
+  },
+  {
+    path: "/help/Hooks",
+    name: "Hooks",
+    component: Hooks,
     layout: "/admin",
     invisible: true,
   },
