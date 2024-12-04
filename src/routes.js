@@ -24,6 +24,7 @@ import Code from "./views/Documentation/Code.js";
 import Components from "./views/Documentation/Components.js";
 import ProjectStructure from "./views/Documentation/ProjectStructure.js";
 import Workflow from "./views/Documentation/Workflow.js";
+import DevelopmentMat from "./views/Documentation/DevelopmentMat";
 
 //-------------------------------------------------------------------------
 import EnvironmentDivision from "./views/Stack/EnvironmentDivision.js";
@@ -142,6 +143,12 @@ var dashRoutes = [
     layout: "/admin",
     dropdown: [
       {
+        path: "/documentation/DevelopmentMat",
+        name: "Development Mat",
+        component: DevelopmentMat,
+        layout: "/admin",
+      },
+      {
         path: "/documentation/Code",
         name: "Code/Rules",
         component: Code,
@@ -164,7 +171,7 @@ var dashRoutes = [
         name: "Workflow",
         component: Workflow,
         layout: "/admin",
-      },
+      }
     ],
   },
   {
@@ -422,6 +429,13 @@ var dashRoutes = [
     layout: "/admin",
     invisible: true,
     dropdownKeepActived: true,
+  },
+  {
+    path: "/documentation/DevelopmentMat",
+    name: "Development Mat",
+    component: DevelopmentMat,
+    layout: "/admin",
+    invisible: true,
   },
   {
     path: "/documentation/Code",
