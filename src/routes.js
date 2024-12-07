@@ -27,16 +27,16 @@ import Workflow from "./views/Documentation/Workflow.js";
 import DevelopmentMat from "./views/Documentation/DevelopmentMat";
 
 //-------------------------------------------------------------------------
-import EnvironmentDivision from "./views/Stack/EnvironmentDivision.js";
-import CodePush from "./views/Stack/CodePush.js";
-import Prettier from "./views/Stack/Prettier.js";
-import ESLint from "./views/Stack/ESLint.js";
-import Husky from "./views/Stack/Husky.js";
-import Analytics from "./views/Stack/Analytics.js";
-import Crashlytics from "./views/Stack/Crashlytics.js";
-import Commitizen from "./views/Stack/Commitizen.js";
-import Pipeline from "./views/Stack/Pipeline.js";
-import Fastlane from "./views/Stack/Fastlane.js";
+import EnvironmentDivision from "./views/Tools/EnvironmentDivision.js";
+import CodePush from "./views/Tools/CodePush.js";
+import Prettier from "./views/Tools/Prettier.js";
+import ESLint from "./views/Tools/ESLint.js";
+import Husky from "./views/Tools/Husky.js";
+import Analytics from "./views/Tools/Analytics.js";
+import Crashlytics from "./views/Tools/Crashlytics.js";
+import Commitizen from "./views/Tools/Commitizen.js";
+import Pipeline from "./views/Tools/Pipeline.js";
+import Fastlane from "./views/Tools/Fastlane.js";
 
 //-------------------------------------------------------------------------
 import Windows from "./views/WorkspacePreparation/Windows.js";
@@ -55,6 +55,7 @@ import Flatlist from "./views/Help/Flatlist.js";
 import Camera from "./views/Help/Camera.js";
 import Axios from "./views/Help/Axios.js";
 import Hooks from "./views/Help/Hooks.js";
+import StateManagement from "./views/Help/StateManagement.js";
 
 var dashRoutes = [
   {
@@ -254,12 +255,18 @@ var dashRoutes = [
         component: Hooks,
         layout: "/admin",
       },
+      {
+        path: "/help/StateManagement",
+        name: "React Query | Zustand",
+        component: StateManagement,
+        layout: "/admin",
+      },
     ],
   },
   {
     icon: "objects_spaceship",
     path: "/stack/EnvironmentDivision",
-    name: "Stack",
+    name: "Tools",
     component: EnvironmentDivision,
     layout: "/admin",
     dropdown: [
@@ -651,6 +658,13 @@ var dashRoutes = [
     path: "/help/Hooks",
     name: "Hooks",
     component: Hooks,
+    layout: "/admin",
+    invisible: true,
+  },
+  {
+    path: "/help/StateManagement",
+    name: "React Query | Zustand",
+    component: StateManagement,
     layout: "/admin",
     invisible: true,
   },
