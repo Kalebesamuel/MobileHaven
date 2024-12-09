@@ -26,6 +26,7 @@ import ProjectStructure from "./views/Documentation/ProjectStructure.js";
 import Workflow from "./views/Documentation/Workflow.js";
 import DevelopmentMat from "./views/Documentation/DevelopmentMat";
 import DefinitionOfDone from "./views/Documentation/DefinitionOfDone";
+import LogisticDictionary from "./views/Documentation/LogisticDictionary";
 
 //-------------------------------------------------------------------------
 import Storybook from "./views/Tools/Storybook.js";
@@ -158,7 +159,13 @@ var dashRoutes = [
         name: "DoD (Definition of Done)",
         component: DefinitionOfDone,
         layout: "/admin",
-      },      
+      },  
+      {
+        path: "/documentation/LogisticDictionary",
+        name: "Logistic Dictionary",
+        component: LogisticDictionary,
+        layout: "/admin",
+      },         
       {
         path: "/documentation/Code",
         name: "Code/Rules",
@@ -707,6 +714,13 @@ var dashRoutes = [
     path: "/help/MMKV",
     name: "MMKV",
     component: MMKV,
+    layout: "/admin",
+    invisible: true,
+  },
+  {
+    path: "/documentation/LogisticDictionary",
+    name: "Logistic Dictionary",
+    component: LogisticDictionary,
     layout: "/admin",
     invisible: true,
   },
