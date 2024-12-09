@@ -27,6 +27,7 @@ import Workflow from "./views/Documentation/Workflow.js";
 import DevelopmentMat from "./views/Documentation/DevelopmentMat";
 
 //-------------------------------------------------------------------------
+import Storybook from "./views/Tools/Storybook.js";
 import EnvironmentDivision from "./views/Tools/EnvironmentDivision.js";
 import CodePush from "./views/Tools/CodePush.js";
 import Prettier from "./views/Tools/Prettier.js";
@@ -278,6 +279,12 @@ var dashRoutes = [
     layout: "/admin",
     dropdown: [
       {
+        path: "/stack/Storybook",
+        name: "Storybook",
+        component: Storybook,
+        layout: "/admin",
+      },
+      {
         path: "/stack/EnvironmentDivision",
         name: "Divisão de ambientes",
         component: EnvironmentDivision,
@@ -527,6 +534,13 @@ var dashRoutes = [
     component: GeneratingKeystore,
     layout: "/admin",
     invisible: true,
+  },
+  {
+    path: "/stack/Storybook",
+    name: "Storybook",
+    component: Storybook,
+    layout: "/admin",
+    invisible: true
   },
   {
     path: "/stack/EnvironmentDivision",
