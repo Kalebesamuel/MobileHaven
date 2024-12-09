@@ -10,6 +10,7 @@ import ButtonLink from "../../components/Buttons/ButtonLink";
 
 import { CodeExamplesCodePush } from "../../variables/codeExamplesCodePush.js";
 import { useScrollToAnchorByParams, useChangeAnchorLink } from "utils";
+import HighlighterCard from "../../components/Highlighters/HighlighterCard.js";
 
 //= ==============================================================================================
 function CodePush() {
@@ -56,8 +57,10 @@ function CodePush() {
                 </p>
               </CardHeader>
 
-              <CardBody>
+              <CardBody>                
                 <p>
+                  <HighlighterCard text="O App Center será desativado no dia 31 de Março de 2025." type="danger"/>
+
                   <h6>
                     <a id="newProjects">
                       Ambientes de deployment e integração do CodePush com o

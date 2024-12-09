@@ -292,19 +292,19 @@ var dashRoutes = [
       },
       {
         path: "/stack/CodePush",
-        name: "CodePush",
+        name: "CodePush (Deprecated)",
         component: CodePush,
         layout: "/admin",
       },
       {
         path: "/stack/Crashlytics",
-        name: "Crashlytics",
+        name: "Crashlytics (Deprecated)",
         component: Crashlytics,
         layout: "/admin",
       },
       {
         path: "/stack/Analytics",
-        name: "Analytics",
+        name: "Analytics (Deprecated)",
         component: Analytics,
         layout: "/admin",
       },

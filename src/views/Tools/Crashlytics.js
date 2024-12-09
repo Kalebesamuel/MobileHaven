@@ -10,6 +10,7 @@ import ButtonLink from "../../components/Buttons/ButtonLink";
 
 import { CodeExamplesCrashlytics } from "../../variables/codeExamplesCrashlytics";
 import { useScrollToAnchorByParams, useChangeAnchorLink } from "utils";
+import HighlighterCard from "../../components/Highlighters/HighlighterCard.js";
 
 //= ==============================================================================================
 function Crashlytics() {
@@ -49,6 +50,8 @@ function Crashlytics() {
 
               <CardBody>
                 <p>
+                  <HighlighterCard text="O App Center será desativado no dia 31 de Março de 2025." type="danger"/>
+
                   <h6>
                     <a id="crashlytics">
                       A respeito da Integração do Crashlytics do App Center com

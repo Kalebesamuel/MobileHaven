@@ -10,6 +10,7 @@ import ButtonLink from "../../components/Buttons/ButtonLink";
 
 import { CodeExampleEvents } from "../../variables/codeExampleEvents.js";
 import { useScrollToAnchorByParams, useChangeAnchorLink } from "utils";
+import HighlighterCard from "../../components/Highlighters/HighlighterCard.js";
 
 //= ==============================================================================================
 function Analytics() {
@@ -49,6 +50,8 @@ function Analytics() {
 
               <CardBody>
                 <p>
+                  <HighlighterCard text="O App Center será desativado no dia 31 de Março de 2025." type="danger"/>
+
                   <h6>
                     <a id="newProjects">
                       A respeito da Integração do Analytics do App Center com o
