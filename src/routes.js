@@ -29,6 +29,7 @@ import DefinitionOfDone from "./views/Documentation/DefinitionOfDone";
 import LogisticDictionary from "./views/Documentation/LogisticDictionary";
 
 //-------------------------------------------------------------------------
+import AtomicDesign from "./views/Tools/AtomicDesign";
 import Storybook from "./views/Tools/Storybook.js";
 import EnvironmentDivision from "./views/Tools/EnvironmentDivision.js";
 import CodePush from "./views/Tools/CodePush.js";
@@ -292,6 +293,12 @@ var dashRoutes = [
     component: EnvironmentDivision,
     layout: "/admin",
     dropdown: [
+      {
+        path: "/stack/AtomicDesign",
+        name: "AtomicDesign",
+        component: AtomicDesign,
+        layout: "/admin",
+      },
       {
         path: "/stack/Storybook",
         name: "Storybook",
@@ -560,6 +567,13 @@ var dashRoutes = [
     path: "/stack/Storybook",
     name: "Storybook",
     component: Storybook,
+    layout: "/admin",
+    invisible: true
+  },
+  {
+    path: "/stack/AtomicDesign",
+    name: "AtomicDesign",
+    component: AtomicDesign,
     layout: "/admin",
     invisible: true
   },
