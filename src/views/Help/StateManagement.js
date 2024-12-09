@@ -18,6 +18,7 @@ import { CodeExamplesStateManagement } from "../../variables/codeExampleStateMan
 
 import PanelHeader from "../../components/PanelHeader/PanelHeader.js";
 import ButtonLink from "../../components/Buttons/ButtonLink";
+import HighlighterText from "components/Highlighters/HighlighterText";
 
 //= ==============================================================================================
 const StateManagement = () => {
@@ -28,6 +29,7 @@ const StateManagement = () => {
   const refPracticalUsage =  useRef(null);
   const refReactQuery =  useRef(null);
   const refReactQueryBasicUsage =  useRef(null);
+  const refReactQueryCacheProperties =  useRef(null);
   const refZustand =  useRef(null);
 
   useScrollToAnchorByParams({
@@ -38,6 +40,7 @@ const StateManagement = () => {
     refPracticalUsage,
     refReactQuery,
     refReactQueryBasicUsage,
+    refReactQueryCacheProperties,
     refZustand
   });
 
@@ -63,37 +66,59 @@ const StateManagement = () => {
                 <div id="react-redux">
                   <h6>
                     <a id="whyUseReactQuery" ref={refWhyUseReactQuery}>
-                      Por que usar React Query para estados do server side?
+                      Por que usar React Query para gerenciar estados do server side?
                     </a>
                   </h6>
-                  <h7
-                    id="effect"
-                    class="text-muted font-weight-bold"
-                  >
-                    1. Otimização no consumo de dados:
-                  </h7>
-                  <p>
-                    O React Query foi feito para gerenciar estados que vêm do server side. Ele cuida do cache, refetch em segundo plano e invalidação de queries automaticamente, economizando esforço no código.
-                  </p>
-                  <h7
-                    id="effect"
-                    class="text-muted font-weight-bold"
-                  >
-                    2. Gestão de dados assíncronos:
-                  </h7>
-                  <p>
-                    É excelente para lidar com estados assíncronos, como carregamento ou erros. Isso garante que a interface esteja sempre atualizada e fluida.
-                  </p>
-                  <h7
-                    id="effect"
-                    class="text-muted font-weight-bold"
-                  >
-                    3. Integração fácil:
-                  </h7>
-                  <p>
-                    Funciona perfeitamente com o Expo e integra-se bem a bibliotecas como Axios ou Fetch API.
-                  </p>
 
+                  <Table striped hover>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Otimização no consumo de dados
+                          </h7>
+                        </td>
+                        <td>
+                          O React Query foi feito para gerenciar estados que vêm do server side. Ele cuida do cache, refetch em segundo plano e invalidação de queries automaticamente, economizando esforço no código.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Gestão de dados assíncronos
+                          </h7>
+                        </td>
+                        <td>
+                          É excelente para lidar com estados assíncronos, como carregamento ou erros. Isso garante que a interface esteja sempre atualizada e fluida.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Integração fácil
+                          </h7>
+                        </td>
+                        <td>
+                        Funciona perfeitamente com o Expo e integra-se bem a bibliotecas como Axios ou Fetch API.
+                        </td>
+                      </tr>                      
+                    </tbody>
+                  </Table>                                    
                   <br/>
 
                   <h6>
@@ -101,69 +126,123 @@ const StateManagement = () => {
                       Por que usar Zustand para estados do client side?
                     </a>
                   </h6>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    1. Simplicidade:
-                  </h7>
-                  <p>
-                    O Zustand é leve, simples e não exige configurações complicadas. É ideal para estados locais, como (form data, UI state, toggles, ...).
-                  </p>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    2. Performance:
-                  </h7>
-                  <p>
-                    Ele evita renders desnecessários, isolando cada pedaço do state focando apenas nas partes que realmente precisam ser atualizadas.
-                  </p>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    3. Casos de uso claros:
-                  </h7>
-                  <p>
-                    É perfeito para estados transitórios, como preferências de usuário, alternância de temas ou exibição de modais.
-                  </p>
-                  <br/>
+                  <Table striped hover>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Simplicidade
+                          </h7>
+                        </td>
+                        <td>
+                          O Zustand é leve, simples e não exige configurações complicadas. É ideal para estados locais, como (form data, UI state, toggles, ...).
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Performance
+                          </h7>
+                        </td>
+                        <td>
+                          Ele evita renders desnecessários, isolando cada pedaço do state focando apenas nas partes que realmente precisam ser atualizadas.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Casos de uso claros
+                          </h7>
+                        </td>
+                        <td>
+                          É perfeito para estados transitórios, como preferências de usuário, alternância de temas ou exibição de modais.
+                        </td>
+                      </tr>                      
+                    </tbody>
+                  </Table>
+                                    
+                  <br/>                  
 
                   <h6>
                     <a id="benefits" ref={refBenefits}>
                       Benefícios de usar os dois juntos
                     </a>
                   </h6>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    1. Separação clara de responsabilidades:
-                  </h7>
-                  <p>
-                    <ul>
-                      <li>
-                        O React Query gerencia os estados vindos do server side (ex.: dados de APIs).
-                      </li>
-                      <li>
-                        O Zustand cuida de lógicas locais e transitórias.
-                        Isso mantém o código mais limpo e organizado.
-                      </li>
-                    </ul>
-                  </p>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    2. Flexibilidade:
-                  </h7>
-                  <p>
-                    Cada biblioteca pode ser escalada de forma independente conforme o app cresce.
-                  </p>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    3. Melhor desempenho:
-                  </h7>
-                  <p>
-                    O cache do React Query reduz chamadas desnecessárias ao servidor, enquanto o Zustand otimiza o gerenciamento de estados locais, evitando renders desnecessários.
-                  </p>
+                  <Table striped hover>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Separação clara de responsabilidades
+                          </h7>
+                        </td>
+                        <td>
+                          <p>
+                            <ul>
+                              <li>
+                                O React Query gerencia os estados vindos do server side (ex.: dados de APIs).
+                              </li>
+                              <li>
+                                O Zustand cuida de lógicas locais e transitórias.
+                                Isso mantém o código mais limpo e organizado.
+                              </li>
+                            </ul>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Flexibilidade
+                          </h7>
+                        </td>
+                        <td>
+                          Cada biblioteca pode ser escalada de forma independente conforme o app cresce.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Melhor desempenho
+                          </h7>
+                        </td>
+                        <td>
+                          O cache do React Query reduz chamadas desnecessárias ao servidor, enquanto o Zustand otimiza o gerenciamento de estados locais, evitando renders desnecessários.
+                        </td>
+                      </tr>                      
+                    </tbody>
+                  </Table>
+                                   
                   <br/>
 
                   <h6>
@@ -171,74 +250,99 @@ const StateManagement = () => {
                       Pontos de atenção
                     </a>
                   </h6>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    1. Curva de aprendizado:
-                  </h7>
-                  <p>
-                    É importante entender bem os papéis de cada biblioteca para evitar uso incorreto. Misturar responsabilidades (como duplicar estados entre elas) pode trazer problemas.
-                  </p>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    2. Evitar duplicação de estados:
-                  </h7>
-                  <p>
-                    Não armazene no Zustand informações que já estão sendo gerenciadas pelo React Query. Aproveite os recursos de cache e sincronização do React Query.
-                  </p>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    3. Compatibilidade com Expo:
-                  </h7>
-                  <p>
-                    Ambas as bibliotecas funcionam perfeitamente com Expo, então não há motivos para preocupação.
-                  </p>                 
-                  <br />
+
+                  <Table striped hover>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Curva de aprendizado
+                          </h7>
+                        </td>
+                        <td>
+                          É importante entender bem os papéis de cada biblioteca para evitar uso incorreto. Misturar responsabilidades (como duplicar estados entre elas) pode trazer problemas.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Evitar duplicação de estados
+                          </h7>
+                        </td>
+                        <td>
+                          Não armazene no Zustand informações que já estão sendo gerenciadas pelo React Query. Aproveite os recursos de cache e sincronização do React Query.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h7
+                            id="effect"
+                            class="text-muted font-weight-bold"
+                          >
+                            Compatibilidade com Expo
+                          </h7>
+                        </td>
+                        <td>
+                          Ambas as bibliotecas funcionam perfeitamente com Expo, então não há motivos para preocupação.
+                        </td>
+                      </tr>                      
+                    </tbody>
+                  </Table>   
+                  <br/>                                                   
 
                   <h6>
                     <a id="practicalUsage" ref={refPracticalUsage}>
                       Casos de uso práticos
                     </a>
                   </h6>
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    1. React Query:
-                  </h7>
-                  <p>
-                    <ul>
-                      <li>
-                        Buscar e sincronizar dados do usuário vindos de uma API.
-                      </li>
-                      <li>
-                        Implementar paginação e scroll infinito.
-                      </li>
-                      <li>
-                        Refazer fetch automaticamente quando o app volta ao foco ou reconecta à rede.
-                      </li>
-                    </ul>
-                  </p>
 
-                  <h7
-                    class="text-muted font-weight-bold"
-                  >
-                    2. Zustand:
-                  </h7>
-                  <p>
-                    <ul>
-                      <li>
-                        Gerenciar estados de interface, como visibilidade de modais ou abas.
-                      </li>
-                      <li>
-                        Manter dados temporários, como um rascunho antes de submeter um formulário.
-                      </li>
-                      <li>
-                        Gerenciar estados globais, como o tema do app (modo claro/escuro).
-                      </li>
-                    </ul>
-                  </p>                         
+                  <Table striped hover>
+                    <thead>
+                      <tr>
+                        <th>React Query</th>
+                        <th>Zustand</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>                         
+                          Buscar e sincronizar dados do usuário vindos de uma API.                          
+                        </td>
+                        <td>
+                          Gerenciar estados de interface, como visibilidade de modais ou aba
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>                          
+                          Implementar paginação e scroll infinito.
+                        </td>
+                        <td>
+                          Manter dados temporários, como um rascunho antes de submeter um formulário.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>                          
+                          Refazer fetch automaticamente quando o app volta ao foco ou reconecta à rede.
+                        </td>
+                        <td>
+                          Gerenciar estados globais, como o tema do app (modo claro/escuro).
+                        </td>
+                      </tr>                      
+                    </tbody>
+                  </Table>   
+                                
                   <br />
                   <hr />
                   <h6>
@@ -259,7 +363,7 @@ const StateManagement = () => {
                     style={a11yDark}
                     PreTag="div"
                     children={CodeExamplesStateManagement.reactQueryConfigStart}
-                  />
+                  />                  
                   <br/>
                   <p>
                     Adicione o <h7 class="text-muted">QueryClientProvider</h7> no <h7 class="text-muted">App.tsx</h7>:
@@ -287,6 +391,7 @@ const StateManagement = () => {
                     PreTag="div"
                     children={CodeExamplesStateManagement.reactQuerybasicUse}
                   />
+
                   <br/>
                   <h7
                     class="text-muted font-weight-bold"
@@ -296,6 +401,138 @@ const StateManagement = () => {
                   <p>
                     Apenas certifique-se de usar o <h7 class="text-muted">setupReactQuery</h7> mostrado anteriormente. O React Query cuidará de armazenar os dados no <h7 class="text-muted">MMKV</h7>:
                   </p>
+
+
+                  <br/>
+                  <h6>
+                    <a id="refReactQueryCacheProperties" ref={refReactQueryCacheProperties}>
+                      Propriedades maxAge, cacheTime e staleTime
+                    </a>
+                  </h6>
+                  <h7                    
+                    class="text-muted font-weight-bold"
+                  >
+                    Diferenças Fundamentais
+                  </h7>       
+
+                  <Table striped hover>
+                    <thead>
+                      <tr>
+                        <th>Propriedade</th>
+                        <th>Escopo</th>
+                        <th>Validade</th>
+                        <th>Quando Usar?</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>                         
+                          maxAge
+                        </td>
+                        <td>
+                          Persistência (armazenamento)
+                        </td>
+                        <td>
+                          Dados persistidos entre sessões no dispositivo
+                        </td>
+                        <td>
+                          Usar ao configurar persistência de dados no cliente. Deve se tomar muito cuidado ao usar essa propriedade, visto o cenário usando uma tela A e uma tela B, caso a API Call aconteça somente na tela A e o aplicativo devido alguma regra abra na tela B em que não acontece a API Call e os dados em memória já foram descartados devido expiração, ao tentar utilizar os dados será retornado undefined, possivelmente causando erros na aplicação se não tratado corretamente.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>                          
+                          cacheTime
+                        </td>
+                        <td>
+                          Cache em memória (temporário)
+                        </td>
+                        <td>
+                          Dados na memória após a query se tornar inativa
+                        </td>
+                        <td>
+                          Usar para definir quando descartar dados inativos. Assim como na propriedade maxAge deve se tomar cuidado ao usar essa propriedade, visto que o mesmo cenário exposto no maxAge também se aplica a essa propriedade.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>                          
+                          staleTime
+                        </td>
+                        <td>
+                          Validade de dados (obsoletos ou não)
+                        </td>
+                        <td>
+                          Define quando os dados serão considerados "velhos"
+                        </td>
+                        <td>
+                          Usar para otimizar buscas e evitar refetchs desnecessários
+                        </td>
+                      </tr>  
+                      <tr>
+                        <td>                          
+                          refetchOnMount
+                        </td>
+                        <td>
+                          -
+                        </td>
+                        <td>
+                          -
+                        </td>
+                        <td>
+                          Ao definir a propriedade refetchOnMount como true, sempre que o usuário entrar na tela a API Call será chamada novamente. Essa propriedade deve ser utilizada somente em casos muito específicos em que a chamada da API deva realmente acontecer toda vez sem considerar qualquer valor do cache.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>                          
+                          refetchOnWindowsMount
+                        </td>
+                        <td>
+                          -
+                        </td>
+                        <td>
+                          -
+                        </td>
+                        <td>
+                          Ao definir a propriedade refetchOnWindowsMount como true, sempre que a tela ganhar foco a API será chamada novamente também desprezando as propriedades, staleTime, cacheTime e maxAge.
+                        </td>
+                      </tr>                         
+                    </tbody>
+                  </Table>  
+
+                  <h7
+                    class="text-muted font-weight-bold"
+                  >
+                    Exemplos Combinados
+                  </h7>    
+                  <br/>     
+
+                  <SyntaxHighlighter
+                    language="js"
+                    style={a11yDark}
+                    PreTag="div"
+                    children={CodeExamplesStateManagement.reactQueryStoreParams}
+                  />
+                  <br/>
+
+                  <h7
+                    class="text-muted font-weight-bold"
+                  >
+                    Resultados
+                  </h7>
+                  <p>
+                    <ul>
+                      <li>
+                        <HighlighterText search="(staleTime)">Os dados não serão refetchados por 5 minutos após serem carregados (staleTime).</HighlighterText>
+                      </li>
+                      <li>
+                        <HighlighterText search="(cacheTime)">Após a query ficar inativa, os dados permanecerão no cache por 10 minutos antes de serem descartados (cacheTime).</HighlighterText>
+                      </li>
+                      <li>
+                        <HighlighterText search="(maxAge)">Os dados persistidos serão descartados após 1 dia (maxAge).</HighlighterText>
+                      </li>
+                    </ul>
+                  </p>    
+                  <br/>
+
                   <hr/>
 
                   <h6>
@@ -306,7 +543,7 @@ const StateManagement = () => {
                   <h7
                     class="text-muted font-weight-bold"
                   >
-                    Configuração básica
+                    Configuração básica sem persistência de dados
                   </h7>
                   <p>
                     Crie um arquivo <h7 class="text-muted">src/store/useStore.ts</h7>:
@@ -318,6 +555,23 @@ const StateManagement = () => {
                     children={CodeExamplesStateManagement.zustandStartConfig}
                   />
                   <br/>
+
+                  <h7
+                    class="text-muted font-weight-bold"
+                  >
+                    Configuração com MMKV para persistir os dados
+                  </h7>
+                  <p>
+                    Pense bem na arquitetura dos <h7 class="text-muted">stores</h7>, não considere somente o que está sendo criado agora mas o que poderá ser criado no futuro, em alguns momentos fará sentido termos vários stores:
+                  </p>
+                  <SyntaxHighlighter
+                    language="js"
+                    style={a11yDark}
+                    PreTag="div"
+                    children={CodeExamplesStateManagement.zustandWithMMKV}
+                  />
+                  <br/>
+
                   <h7
                     class="text-muted font-weight-bold"
                   >
@@ -331,18 +585,7 @@ const StateManagement = () => {
                     style={a11yDark}
                     PreTag="div"
                     children={CodeExamplesStateManagement.zustandBasicUse}
-                  />
-                  
-                  <br/>
-                  <p>
-                   Gerenciar estado offline-first no Zustand (dados temporários):
-                  </p>
-                  <SyntaxHighlighter
-                    language="js"
-                    style={a11yDark}
-                    PreTag="div"
-                    children={CodeExamplesStateManagement.zustandOffline}
-                  />
+                  />                                  
                 </div>
               </CardBody>
             </Card>
@@ -409,6 +652,12 @@ const StateManagement = () => {
                     </li>
                     <li>
                       <ButtonLink
+                        link="Propriedades maxAge, cacheTime e staleTime"
+                        onClick={() => changeAnchorLink("refReactQueryCacheProperties")}
+                      />
+                    </li>
+                    <li>
+                      <ButtonLink
                         link="Zustand"
                         onClick={() => changeAnchorLink("refZustand")}
                       />
@@ -422,40 +671,6 @@ const StateManagement = () => {
       </div>
     </>
   );
-};
-
-const styles = {
-  cardHeaderBreadcrumb: {
-    fontSize: "1rem",
-    fontWeight: "100",
-    color: "#888",
-  },
-  cardHeaderTitle: {
-    fontWeight: "bold",
-    fontSize: "2rem",
-    color: "#444",
-  },
-  itemContainer: {},
-  itemTitle: {
-    fontSize: "1.1rem",
-    color: "#444",
-    fontWeight: "bold",
-    marginBottom: "1rem",
-    marginTop: "2rem",
-  },
-  itemText: {
-    fontSize: "0.9rem",
-    color: "#777",
-  },
-  itemSubtitle: {
-    fontSize: "1rem",
-    color: "#555",
-    fontWeight: "bold",
-  },
-  itemSubtext: {
-    fontSize: "0.8rem",
-    color: "#888",
-  },
 };
 
 export default StateManagement;

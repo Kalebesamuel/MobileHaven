@@ -74,6 +74,22 @@ reactQuerybasicUse: `
     );
   };
 `,
+reactQueryStoreParams: `
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutos: evita refetch automático
+      cacheTime: 1000 * 60 * 10, // 10 minutos: mantém dados na memória
+    },
+  },
+});
+
+persistQueryClient({
+  queryClient,
+  persistor: createMMKVStoragePersister(),
+  maxAge: 1000 * 60 * 60 * 24, // 1 dia: persiste dados entre sessões
+});
+`,
 zustandStartConfig: `
 import create from 'zustand';
 
@@ -136,6 +152,58 @@ export const UserScreen = () => {
     </View>
   );
 };
+`,
+zustandWithMMKV: `
+import create from 'zustand';
+import { persist } from 'zustand/middleware';
+import { storage } from './mmkv';
+
+interface CounterState {
+  count: number;
+  increment: () => void;
+  reset: () => void;
+}
+
+export const useCounterStore = create<CounterState>()(
+  persist(
+    (set) => ({ // -- Dentro do set podemos fazer funções mais complexas
+      count: 0,
+      increment: () => set((state) => ({ count: state.count + 1 })),
+      reset: () => set({ count: 0 }),
+    }),
+    {
+      name: 'counter-storage', // -- Esse nome é apenas pra debugging
+      getStorage: () => ({ // -- configurado uma única vez por store
+        getItem: (key) => storage.getString(key) || null,
+        setItem: (key, value) => storage.set(key, value),
+        removeItem: (key) => storage.delete(key),
+      }),
+    }
+  )
+);
+
+interface UserState {
+  users: { id: string; name: string }[];
+  addUser: (user: { id: string; name: string }) => void;
+  updateUser: (id: string, name: string) => void;
+  removeUser: (id: string) => void;
+}
+
+// -- Exemplo de CRUD
+export const useUserStore = create<UserState>((set) => ({
+  users: [],
+  addUser: (user) => set((state) => ({ users: [...state.users, user] })),
+  updateUser: (id, name) => 
+    set((state) => ({
+      users: state.users.map((user) =>
+        user.id === id ? { ...user, name } : user
+      ),
+    })),
+  removeUser: (id) =>
+  set((state) => ({
+    users: state.users.filter((user) => user.id !== id),
+  })),  
+}));
 `
 };
 
