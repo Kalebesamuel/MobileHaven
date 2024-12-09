@@ -25,6 +25,7 @@ import Components from "./views/Documentation/Components.js";
 import ProjectStructure from "./views/Documentation/ProjectStructure.js";
 import Workflow from "./views/Documentation/Workflow.js";
 import DevelopmentMat from "./views/Documentation/DevelopmentMat";
+import DefinitionOfDone from "./views/Documentation/DefinitionOfDone";
 
 //-------------------------------------------------------------------------
 import Storybook from "./views/Tools/Storybook.js";
@@ -152,6 +153,12 @@ var dashRoutes = [
         component: DevelopmentMat,
         layout: "/admin",
       },
+      {
+        path: "/documentation/DefinitionOfDone",
+        name: "DoD (Definition of Done)",
+        component: DefinitionOfDone,
+        layout: "/admin",
+      },      
       {
         path: "/documentation/Code",
         name: "Code/Rules",
@@ -367,13 +374,13 @@ var dashRoutes = [
   //     },
   //   ],
   // },
-  // {
-  //   path: "/dashboard",
-  //   name: "Dashboard",
-  //   icon: "design_app",
-  //   component: Dashboard,
-  //   layout: "/admin",
-  // },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    icon: "design_app",
+    component: Dashboard,
+    layout: "/admin",
+  },
   // {
   //   path: "/notifications",
   //   name: "Notifications",
@@ -462,6 +469,13 @@ var dashRoutes = [
     path: "/documentation/DevelopmentMat",
     name: "Development Mat",
     component: DevelopmentMat,
+    layout: "/admin",
+    invisible: true,
+  },
+  {
+    path: "/documentation/DefinitionOfDone",
+    name: "DoD (Definition of Done)",
+    component: DefinitionOfDone,
     layout: "/admin",
     invisible: true,
   },
