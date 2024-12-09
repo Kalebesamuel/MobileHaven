@@ -15,16 +15,22 @@ import HighlighterCard from "components/Highlighters/HighlighterCard.js";
 
 //= ==============================================================================================
 function AtomicDesign() {
-  const refBenefits  = useRef(null);
-  const refCreatingLibrary  = useRef(null);
-  const refAddStoryBook  = useRef(null);
-  const refRenderingComponents  = useRef(null);
+  const refBenefits = useRef(null);
+  const refProjectStructure = useRef(null);
+  const refAtoms = useRef(null);
+  const refMolecules = useRef(null);
+  const refOrganisms = useRef(null);
+  const refTemplates = useRef(null);
+  const refPages = useRef(null);
 
   useScrollToAnchorByParams({
     refBenefits,
-    refCreatingLibrary,
-    refAddStoryBook,
-    refRenderingComponents,
+    refProjectStructure,
+    refAtoms,
+    refMolecules,
+    refOrganisms,
+    refTemplates,
+    refPages
   });
 
   const changeAnchorLink = useChangeAnchorLink();
@@ -115,9 +121,9 @@ function AtomicDesign() {
                   </Table>
                   <br/>
 
-                  <HighlighterCard text="As pages/screens devem ser construídas diretamente no projeto do app e não dentro da biblioteca do design system. Os componentes devem ser construídos dentro da biblioteca somente até o nível dos templates." type="success"/>
+                  <HighlighterCard text="As pages/screens devem ser construídas diretamente no projeto do app e não dentro da biblioteca do design system. Os componentes devem ser construídos dentro da biblioteca somente até o nível dos templates." type="warning"/>
 
-                  <h6 ref={refCreatingLibrary} id="refCreatingLibrary">
+                  <h6 ref={refProjectStructure} id="refProjectStructure">
                     <a id="Prettier">
                       Estrutura de Pastas
                     </a>
@@ -131,7 +137,7 @@ function AtomicDesign() {
                   />
                   <br/>
 
-                  <h6 ref={refCreatingLibrary} id="refCreatingLibrary">
+                  <h6 ref={refAtoms} id="refAtoms">
                     <a id="Prettier">
                       Atoms
                     </a>
@@ -189,7 +195,7 @@ function AtomicDesign() {
                   />
                   <br/>
 
-                  <h6 ref={refCreatingLibrary} id="refCreatingLibrary">
+                  <h6 ref={refMolecules} id="refMolecules">
                     <a id="Prettier">
                       Moléculas (Molecules)
                     </a>
@@ -213,7 +219,7 @@ function AtomicDesign() {
                   />
                   <br/>
 
-                  <h6 ref={refCreatingLibrary} id="refCreatingLibrary">
+                  <h6 ref={refOrganisms} id="refOrganisms">
                     <a id="Prettier">
                       Organismos (Organisms)
                     </a>
@@ -238,7 +244,7 @@ function AtomicDesign() {
                   />
                   <br/>
 
-                  <h6 ref={refCreatingLibrary} id="refCreatingLibrary">
+                  <h6 ref={refTemplates} id="refTemplates">
                     <a id="Prettier">
                       Templates
                     </a>
@@ -263,7 +269,7 @@ function AtomicDesign() {
                   />
                   <br/>
 
-                  <h6 ref={refCreatingLibrary} id="refCreatingLibrary">
+                  <h6 ref={refPages} id="refPages">
                     <a id="Prettier">
                       Páginas (Pages)
                     </a>
@@ -310,30 +316,48 @@ function AtomicDesign() {
                   <ul>
                     <li>
                       <ButtonLink
-                        link="Benefícios do Storybook + Atomic Design + Verdaccio"
+                        link="Benefícios do Atomic Design"
                         onClick={() => changeAnchorLink("refBenefits")}
                       />
                     </li>
                     <li>
                       <ButtonLink
-                        link="Criação da Biblioteca com Verdaccio"
+                        link="Estrutura de Pastas"
                         onClick={() =>
-                          changeAnchorLink("refCreatingLibrary")
+                          changeAnchorLink("refProjectStructure")
                         }
                       />
                     </li>
                     <li>
                       <ButtonLink
-                        link="Adicione o Storybook ao Projeto"
+                        link="Atoms"
                         onClick={() =>
-                          changeAnchorLink("refAddStoryBook")
+                          changeAnchorLink("refAtoms")
                         }
                       />
                     </li>
                     <li>
                       <ButtonLink
-                        link="Renderizando os componentes na web ou dispositivo físico"
-                        onClick={() => changeAnchorLink("refRenderingComponents")}
+                        link="Moléculas (Molecules)"
+                        onClick={() => changeAnchorLink("refMolecules")}
+                      />
+                    </li>
+                    <li>
+                      <ButtonLink
+                        link="Organismos (Organisms)"
+                        onClick={() => changeAnchorLink("refOrganisms")}
+                      />
+                    </li>
+                    <li>
+                      <ButtonLink
+                        link="Templates"
+                        onClick={() => changeAnchorLink("refTemplates")}
+                      />
+                    </li>
+                    <li>
+                      <ButtonLink
+                        link="Páginas (Pages)"
+                        onClick={() => changeAnchorLink("refPages")}
                       />
                     </li>
                   </ul>

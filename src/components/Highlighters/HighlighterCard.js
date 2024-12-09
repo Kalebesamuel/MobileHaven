@@ -4,11 +4,11 @@ import { Card, CardText } from "reactstrap";
 //= ==========================================================================================
 export default function HighlighterCard({ type = "defaultv1", text }) {
   const types = {
-    defaultv1: { color: "rgb(66, 72, 87)", icon: "business_globe", colorText: "#FFF" },
-    accent: { color: "rgb(45, 104, 202)", icon: "business_globe", colorText: "#FFF"  },
-    success: { color: "rgb(63, 132, 84)", icon: "business_globe", colorText: "#000"  },
-    warning: { color: "rgb(242, 170, 60)", icon: "business_globe", colorText: "#000"  },
-    danger: { color: "rgb(171, 41, 58)", icon: "business_globe", colorText: "#FFF"  },
+    defaultv1: { color: "rgb(66, 72, 87)", icon: "education_glasses", colorText: "#FFF" },
+    accent: { color: "rgb(45, 104, 202)", icon: "education_glasses", colorText: "#FFF"  },
+    success: { color: "rgb(63, 132, 84)", icon: "education_glasses", colorText: "#000"  },
+    warning: { color: "rgb(242, 170, 60)", icon: "education_glasses", colorText: "#000"  },
+    danger: { color: "rgb(171, 41, 58)", icon: "education_glasses", colorText: "#FFF"  },
   };
 
   const typeConfig = types[type] || types.defaultv1;
