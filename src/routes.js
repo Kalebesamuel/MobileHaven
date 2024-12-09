@@ -56,6 +56,7 @@ import Camera from "./views/Help/Camera.js";
 import Axios from "./views/Help/Axios.js";
 import Hooks from "./views/Help/Hooks.js";
 import StateManagement from "./views/Help/StateManagement.js";
+import MMKV from "./views/Help/MMKV.js";
 
 var dashRoutes = [
   {
@@ -259,6 +260,12 @@ var dashRoutes = [
         path: "/help/StateManagement",
         name: "React Query | Zustand",
         component: StateManagement,
+        layout: "/admin",
+      },
+      {
+        path: "/help/MMKV",
+        name: "MMKV",
+        component: MMKV,
         layout: "/admin",
       },
     ],
@@ -665,6 +672,13 @@ var dashRoutes = [
     path: "/help/StateManagement",
     name: "React Query | Zustand",
     component: StateManagement,
+    layout: "/admin",
+    invisible: true,
+  },
+  {
+    path: "/help/MMKV",
+    name: "MMKV",
+    component: MMKV,
     layout: "/admin",
     invisible: true,
   },
