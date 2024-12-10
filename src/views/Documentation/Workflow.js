@@ -128,8 +128,13 @@ function Workflow() {
                       </tr>
                       <tr>
                         <td className="text-secondary">Daily</td>
-                        <td>15 minutos</td>
+                        <td>15-30 minutos</td>
                         <td>Diariamente às 08h30.</td>
+                      </tr>
+                      <tr>
+                        <td className="text-secondary">Technical Refinament</td>
+                        <td>30-60 minutos</td>
+                        <td>Antes de iniciar cada sprint.</td>
                       </tr>
                       <tr>
                         <td className="text-secondary">Sprint retrospective</td>
@@ -149,6 +154,7 @@ function Workflow() {
                     As demandas podem chegar pelas seguintes direções:
                   </h7>
                   <ul>
+                    <li>Suporte;</li>
                     <li>Reuniões formais;</li>
                     <li>Reuniões informais;</li>
                     <li>Emails de clientes;</li>
@@ -270,14 +276,20 @@ function Workflow() {
                         </td>
                       </tr>
                       <tr>
-                        <td className="text-secondary">Qualidade</td>
+                        <td className="text-secondary">Liderança Técnica</td>
                         <td>
-                          Task foi desenvolvida e está aguardando codeReview e
-                          validação pelo Tech Lead.
+                          Task foi desenvolvida e está aguardando codeReview/
+                          validação.
                         </td>
                       </tr>
                       <tr>
-                        <td className="text-secondary">Key User</td>
+                        <td className="text-secondary">Qualidade</td>
+                        <td>
+                          Aguardando teste do QA.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-secondary">Keyuser</td>
                         <td>
                           Task foi desenvolvida, testada, foi realizado o
                           codeReview e a validação técnica do Tech Lead, agora o
@@ -285,6 +297,12 @@ function Workflow() {
                           para aguardar a validação do mesmo, em alguns casos
                           será necessário gerar apk em qas e enviá-la para o Key
                           User.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-secondary">Pull Request</td>
+                        <td>
+                          Tarefa está aguardando janela de deploy.
                         </td>
                       </tr>
                       <tr>
@@ -378,7 +396,7 @@ function Workflow() {
                     Sempre que vamos realizar uma task por padrão criamos uma
                     branch a partir de DEV com o mesmo ID do Jira, como exemplo,
                     se temos uma atividade com o ID EVOLOG-3040 então teríamos
-                    algo assim:
+                    como mostrado abaixo, caso se tratar de um épico onde será desenvolvida várias tarefas:
                   </p>
                   <pre>
                     <SyntaxHighlighter
@@ -389,10 +407,11 @@ function Workflow() {
                     />
                   </pre>
 
+                  <h7 class="text-muted font-weight-bold">Code Review</h7>
                   <p>
                     Após o término da atividade deve ser criado um pull request
-                    da branch auxiliar pra dev, o Tech Lead irá realizar o code
-                    review e caso validado concluirá o merge.
+                    da branch auxiliar para dev ou caso se tratar de uma task vinculada a um épico, deverá ser feito o PR para a branch do épico, dois desenvolvedores do time irão realizar o code
+                    review e caso validado o merge será concluído.
                   </p>
                 </p>
               </CardBody>
