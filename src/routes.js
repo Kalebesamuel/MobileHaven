@@ -61,6 +61,7 @@ import Axios from "./views/Help/Axios.js";
 import Hooks from "./views/Help/Hooks.js";
 import StateManagement from "./views/Help/StateManagement.js";
 import MMKV from "./views/Help/MMKV.js";
+import Forms from "./views/Help/Forms.js";
 
 var dashRoutes = [
   {
@@ -282,6 +283,12 @@ var dashRoutes = [
         path: "/help/MMKV",
         name: "MMKV",
         component: MMKV,
+        layout: "/admin",
+      },
+      {
+        path: "/help/Forms",
+        name: "React Hook Form + Zod",
+        component: Forms,
         layout: "/admin",
       },
     ],
@@ -730,6 +737,13 @@ var dashRoutes = [
     component: MMKV,
     layout: "/admin",
     invisible: true,
+  },
+  {
+    path: "/help/Forms",
+    name: "React Hook Form + Zod",
+    component: Forms,
+    layout: "/admin",
+    invisible: true
   },
   {
     path: "/documentation/LogisticDictionary",
