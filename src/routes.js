@@ -62,6 +62,7 @@ import Hooks from "./views/Help/Hooks.js";
 import StateManagement from "./views/Help/StateManagement.js";
 import MMKV from "./views/Help/MMKV.js";
 import Forms from "./views/Help/Forms.js";
+import Unistyles from "views/Help/Unistyles.js";
 
 var dashRoutes = [
   {
@@ -289,6 +290,12 @@ var dashRoutes = [
         path: "/help/Forms",
         name: "React Hook Form + Zod",
         component: Forms,
+        layout: "/admin",
+      },
+      {
+        path: "/help/Unistyles",
+        name: "Unistyles",
+        component: Unistyles,
         layout: "/admin",
       },
     ],
@@ -742,6 +749,13 @@ var dashRoutes = [
     path: "/help/Forms",
     name: "React Hook Form + Zod",
     component: Forms,
+    layout: "/admin",
+    invisible: true
+  },
+  {
+    path: "/help/Unistyles",
+    name: "Unistyles",
+    component: Unistyles,
     layout: "/admin",
     invisible: true
   },
