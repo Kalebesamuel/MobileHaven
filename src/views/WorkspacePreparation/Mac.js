@@ -4,7 +4,7 @@ import { Row, Col, Card, CardBody, CardHeader, CardTitle } from "reactstrap";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { CodeExamples } from "variables/codeExamples";
+import { CodeExamples } from "../../variables/codeExamples";
 
 import PanelHeader from "../../components/PanelHeader/PanelHeader.js";
 import { useScrollToAnchorByParams, useChangeAnchorLink } from "utils";
@@ -77,12 +77,12 @@ const Mac = () => {
                       </li>
                       <li class="list-group-item ">
                         <h5 class="list-group-item-heading">
-                          Java - Última Versão
+                          Java 17
                         </h5>
                         <a
                           class="list-group-item-text"
                           className="text-muted"
-                          href="https://www.java.com/en/download/"
+                          href="https://download.oracle.com/java/17/archive/jdk-17.0.12_macos-aarch64_bin.dmg"
                           target="_blank"
                         >
                           - Download
@@ -90,16 +90,15 @@ const Mac = () => {
                       </li>
                       <li class="list-group-item">
                         <h5 class="list-group-item-heading">
-                          NodeJS - 10.17.0
+                          NodeJS - 10.17.0 (Servidores) e 19.9.0 (Apps)
                         </h5>
-                        <a
-                          class="list-group-item-text"
-                          className="text-muted"
-                          href="https://nodejs.org/download/release/v10.17.0/node-v10.17.0.pkg"
-                          target="_blank"
-                        >
-                          - Download
-                        </a>
+                        <p>Use o nvm para realizar a instalação:</p>
+                        <SyntaxHighlighter
+                          language="js"
+                          style={a11yDark}
+                          PreTag="div"
+                          children={CodeExamples.nvmInstall}
+                        />                        
                       </li>
                       <li class="list-group-item">
                         <h5 class="list-group-item-heading">
@@ -157,8 +156,13 @@ const Mac = () => {
                         </h5>
                         <p class="list-group-item-text" className="text-muted">
                           Em máquinas Mac, o Git já costuma vir instalado e pode
-                          ser ativado através do comando:
-                          <pre> git version</pre>
+                          ser verificado através do comando:
+                          <SyntaxHighlighter
+                            language="js"
+                            style={a11yDark}
+                            PreTag="div"
+                            children={CodeExamples.gitVersion}
+                          /> 
                           Se por algum motivo não estiver instalado, instale
                           através do link:
                         </p>
@@ -175,19 +179,24 @@ const Mac = () => {
                         <h5 class="list-group-item-heading">Yarn - 1.22.5</h5>
                         <p class="list-group-item-text" className="text-muted">
                           Com o NodeJS instalado, execute o comando:
-                          <pre> sudo npm install --global yarn@1.22.5 </pre>E
-                          depois verifique a instalação com:
-                          <pre> yarn --version </pre>
+                          <SyntaxHighlighter
+                            language="js"
+                            style={a11yDark}
+                            PreTag="div"
+                            children={CodeExamples.yarnInstall}
+                          /> 
                         </p>
                       </li>
                       <li class="list-group-item">
                         <h5 class="list-group-item-heading">Homebrew</h5>
                         <p class="list-group-item-text" className="text-muted">
                           Em um terminal, rode o comando:
-                          <pre>
-                            /bin/bash -c "$(curl -fsSL
-                            https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-                          </pre>
+                          <SyntaxHighlighter
+                            language="js"
+                            style={a11yDark}
+                            PreTag="div"
+                            children={CodeExamples.homebrewInstall}
+                          /> 
                         </p>
                       </li>
                       <li class="list-group-item">
@@ -195,7 +204,12 @@ const Mac = () => {
                         <p class="list-group-item-text" className="text-muted">
                           Com o Homebrew instalado, rode os comandos em um
                           terminal:
-                          <pre> brew install ruby</pre>
+                          <SyntaxHighlighter
+                            language="js"
+                            style={a11yDark}
+                            PreTag="div"
+                            children={CodeExamples.rubyGemInstall}
+                          /> 
                         </p>
                       </li>
                       <li class="list-group-item">
@@ -203,12 +217,19 @@ const Mac = () => {
                         <p class="list-group-item-text" className="text-muted">
                           Com o gerenciador de pacotes do Ruby "gem" instalado
                           (testar utilizando "gem --version"), rodar o comando:
-                          <pre> sudo gem install cocoapods</pre>
+                          <SyntaxHighlighter
+                            language="js"
+                            style={a11yDark}
+                            PreTag="div"
+                            children={CodeExamples.cocoapodsInstall}
+                          /> 
                           Caso ele não funcione, rodar:
-                          <pre>
-                            {" "}
-                            sudo gem install -n /usr/local/bin cocoapods
-                          </pre>
+                          <SyntaxHighlighter
+                            language="js"
+                            style={a11yDark}
+                            PreTag="div"
+                            children={CodeExamples.cocoapodsInstallAlternative}
+                          />
                         </p>
                       </li>
                       <li class="list-group-item">
@@ -228,8 +249,7 @@ const Mac = () => {
                     Variáveis de ambiente
                   </h7>
                   <p style={styles.itemText}>
-                    Crie um arquivo chamado ".zshrc" no diretório do seu usuário
-                    utilizando o utilitário "nano" do terminal:
+                    Acesse o arquivo (~/.zshrc):
                   </p>
                   <SyntaxHighlighter
                     language="bash"
@@ -241,8 +261,7 @@ const Mac = () => {
                     }
                   />
                   <p style={styles.itemText}>
-                    Preencha o arquivo "~/.zshrc" com o seguinte conteúdo e
-                    depois o salve apertando control+O e ENTER:
+                    Preencha e salve o arquivo "~/.zshrc" com o seguinte conteúdo:
                   </p>
                   <SyntaxHighlighter
                     language="bash"

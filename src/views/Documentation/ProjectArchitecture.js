@@ -8,11 +8,11 @@ import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import PanelHeader from "../../components/PanelHeader/PanelHeader.js";
 import ButtonLink from "../../components/Buttons/ButtonLink";
 
-import { CodeExamplesProjectStructure } from "../../variables/codeExamplesProjectStructure";
+import { CodeExamplesProjectArchitecture } from "../../variables/codeExamplesProjectArchitecture";
 import { useScrollToAnchorByParams, useChangeAnchorLink } from "utils";
 
 //= ==============================================================================================
-function ProjectStructure() {
+function ProjectArchitecture() {
   const refPatternImportance = useRef(null);
   const refOldPattern = useRef(null);
   const refOurPattern = useRef(null);
@@ -35,12 +35,12 @@ function ProjectStructure() {
             <Card>
               <CardHeader>
                 <h5 className="title">
-                  Documentação do padrão de projetos dos aplicativos
+                  Documentação do arquitetura de projeto dos aplicativos
                 </h5>
 
                 <p className="text-muted">
                   A estruturação dos projetos é definida por um padrão de
-                  projetos que separa view e logic
+                  projetos que separa view e logic seguindo a Clean Architecture
                 </p>
               </CardHeader>
 
@@ -107,7 +107,7 @@ function ProjectStructure() {
                       language="js"
                       style={a11yDark}
                       PreTag="div"
-                      children={CodeExamplesProjectStructure.normalMode}
+                      children={CodeExamplesProjectArchitecture.normalMode}
                     />
                   </pre>
 
@@ -150,7 +150,7 @@ function ProjectStructure() {
                     id="knowingVLPattern"
                     class="font-weight-bold"
                   >
-                    Conhecendo o padrão de projetos VL (View {"&"} logic)
+                    Conhecendo o padrão de projetos VL (View {"&"} Logic)
                   </h7>
 
                   <p>
@@ -205,7 +205,7 @@ function ProjectStructure() {
                       language="js"
                       style={a11yDark}
                       PreTag="div"
-                      children={CodeExamplesProjectStructure.ourModeLogic}
+                      children={CodeExamplesProjectArchitecture.ourModeLogic}
                     />
                   </pre>
 
@@ -283,7 +283,7 @@ function ProjectStructure() {
                         language="js"
                         style={a11yDark}
                         PreTag="div"
-                        children={CodeExamplesProjectStructure.hookNameWrongWay}
+                        children={CodeExamplesProjectArchitecture.hookNameWrongWay}
                       />
                     </pre>
 
@@ -293,7 +293,7 @@ function ProjectStructure() {
                         language="js"
                         style={a11yDark}
                         PreTag="div"
-                        children={CodeExamplesProjectStructure.hookNameRightWay}
+                        children={CodeExamplesProjectArchitecture.hookNameRightWay}
                       />
                     </pre>
 
@@ -311,7 +311,7 @@ function ProjectStructure() {
                         style={a11yDark}
                         PreTag="div"
                         children={
-                          CodeExamplesProjectStructure.hookDontUseSetWrongWay
+                          CodeExamplesProjectArchitecture.hookDontUseSetWrongWay
                         }
                       />
                     </pre>
@@ -323,7 +323,7 @@ function ProjectStructure() {
                         style={a11yDark}
                         PreTag="div"
                         children={
-                          CodeExamplesProjectStructure.hookDontUseSetRightWay
+                          CodeExamplesProjectArchitecture.hookDontUseSetRightWay
                         }
                       />
                     </pre>
@@ -351,7 +351,7 @@ function ProjectStructure() {
                       language="js"
                       style={a11yDark}
                       PreTag="div"
-                      children={CodeExamplesProjectStructure.hookAsyncWronWay}
+                      children={CodeExamplesProjectArchitecture.hookAsyncWronWay}
                     />
                   </pre>
 
@@ -367,7 +367,7 @@ function ProjectStructure() {
                       language="js"
                       style={a11yDark}
                       PreTag="div"
-                      children={CodeExamplesProjectStructure.hookAsyncRightWay}
+                      children={CodeExamplesProjectArchitecture.hookAsyncRightWay}
                     />
                   </pre>
 
@@ -389,7 +389,7 @@ function ProjectStructure() {
                       style={a11yDark}
                       PreTag="div"
                       children={
-                        CodeExamplesProjectStructure.hookParamOnInstance
+                        CodeExamplesProjectArchitecture.hookParamOnInstance
                       }
                     />
                   </pre>
@@ -405,7 +405,7 @@ function ProjectStructure() {
                       language="js"
                       style={a11yDark}
                       PreTag="div"
-                      children={CodeExamplesProjectStructure.hookParamOnCalled}
+                      children={CodeExamplesProjectArchitecture.hookParamOnCalled}
                     />
                   </pre>
 
@@ -421,7 +421,7 @@ function ProjectStructure() {
                       language="js"
                       style={a11yDark}
                       PreTag="div"
-                      children={CodeExamplesProjectStructure.ourModeView}
+                      children={CodeExamplesProjectArchitecture.ourModeView}
                     />
                   </pre>
 
@@ -477,7 +477,7 @@ function ProjectStructure() {
 
                     <li>
                       <ButtonLink
-                        link="Conhecendo o padrão de projetos VL(View e logic)"
+                        link="Conhecendo o padrão de projetos VL (View e Logic)"
                         onClick={() => changeAnchorLink("refOurPattern")}
                       />
                     </li>
@@ -492,4 +492,4 @@ function ProjectStructure() {
   );
 }
 
-export default ProjectStructure;
+export default ProjectArchitecture;

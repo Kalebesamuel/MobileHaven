@@ -117,7 +117,38 @@ const CodeExamples = {
     hopedKey={'NMCHLIST'}
     showValueWithKey={'NMCHLIST'} />
     `,
+    gitVersion: `git --version`,
+  nvmInstall: `
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
+# download and install Node.js (you may need to restart the terminal)
+nvm install 10.17.0
+nvm install 19
+
+# verifies the right Node.js version is in the environment
+node -v # should print v19.9.0
+
+# verifies the right npm version is in the environment
+npm -v # should print 9.6.3
+  `,
+homebrewInstall: `
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+`,
+yarnInstall: `
+sudo npm install --global yarn
+
+yarn --version
+`,
+rubyGemInstall: `
+  brew install ruby
+`,
+cocoapodsInstall: `
+  sudo gem install cocoapods
+`,
+cocoapodsInstallAlternative: `
+  sudo gem install -n /usr/local/bin cocoapods
+`,
   Help: {
     Componente: {
       BasicStructure: [
@@ -327,7 +358,7 @@ export function useOnDoAction(){
   WorkspacePreparation: {
     Mac: {
       EnvironmentVariables: [
-        `sudo nano ~/.zshrc`,
+        `open ~/.zshrc`,
         `
 #ENVIRONMENT VARIBALES:
 export PATH="/opt/homebrew/opt/node@12/bin:$PATH"
@@ -338,10 +369,9 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 #MY VARIABLES
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home
-#SUBSTITUIR VERSAO
-export ANDROID_HOME=/Users/matheus.quirino/Library/Android/sdk/
-#SUBSTITUIR NOME DE USUARIO
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+export ANDROID_HOME=/Users/bravoti/Library/Android/sdk #SUBSTITUIR NOME DE USUARIO
+
 
 #export ORACLE_HOME=/usr/local/lib/instantclient
 export ORACLE_HOME=/opt/oracle/instantclient
@@ -376,10 +406,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This load$
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-#Aliases
-alias ssh-bravo="ssh -i ~/Desktop/bravolog22.pem -p 22 bravolog@10.0.1.233"
-alias ssh-dev-qas="ssh -i ./Desktop/bravolog-dev-qas.pem -p 22 ubuntu@10.0.3.98"
 
 #Functions
 bash$ makeBackup () {

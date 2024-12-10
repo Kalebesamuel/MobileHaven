@@ -1,4 +1,4 @@
-const CodeExamplesProjectStructure = {
+const CodeExamplesProjectArchitecture = {
   normalMode: `import React, { useContext, useEffect, useState } from 'react';
     import AsyncStorage from '@react-native-community/async-storage';
     import { NativeModules } from 'react-native';
@@ -830,4 +830,4 @@ const CodeExamplesProjectStructure = {
     `,
 };
 
-export { CodeExamplesProjectStructure };
+export { CodeExamplesProjectArchitecture };

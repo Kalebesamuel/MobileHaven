@@ -22,7 +22,7 @@ import GeneratingApkAab from "./views/Help/GeneratingApkAab";
 import GeneratingKeystore from "./views/Help/GeneratingKeystore";
 import Code from "./views/Documentation/Code.js";
 import Components from "./views/Documentation/Components.js";
-import ProjectStructure from "./views/Documentation/ProjectStructure.js";
+import ProjectArchitecture from "./views/Documentation/ProjectArchitecture.js";
 import Workflow from "./views/Documentation/Workflow.js";
 import DevelopmentMat from "./views/Documentation/DevelopmentMat";
 import DefinitionOfDone from "./views/Documentation/DefinitionOfDone";
@@ -181,9 +181,9 @@ var dashRoutes = [
       //   layout: "/admin",
       // },
       {
-        path: "/documentation/ProjectStructure",
-        name: "Project Structure",
-        component: ProjectStructure,
+        path: "/documentation/ProjectArchitecture",
+        name: "Project Architecture",
+        component: ProjectArchitecture,
         layout: "/admin",
       },
       {
@@ -515,9 +515,9 @@ var dashRoutes = [
   //   invisible: true,
   // },
   {
-    path: "/documentation/ProjectStructure",
+    path: "/documentation/ProjectArchitecture",
     name: "Estruturação",
-    component: ProjectStructure,
+    component: ProjectArchitecture,
     layout: "/admin",
     invisible: true,
   },

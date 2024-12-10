@@ -175,7 +175,7 @@ function Storybook() {
                       language="js"
                       style={a11yDark}
                       PreTag="div"
-                      children={CodeExamplesStorybook.projectStructure}
+                      children={CodeExamplesStorybook.ProjectArchitecture}
                     />
                     <br/>  
 

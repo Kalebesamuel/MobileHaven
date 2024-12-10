@@ -16,7 +16,7 @@ import HighlighterCard from "components/Highlighters/HighlighterCard.js";
 //= ==============================================================================================
 function AtomicDesign() {
   const refBenefits = useRef(null);
-  const refProjectStructure = useRef(null);
+  const refProjectArchitecture = useRef(null);
   const refAtoms = useRef(null);
   const refMolecules = useRef(null);
   const refOrganisms = useRef(null);
@@ -25,7 +25,7 @@ function AtomicDesign() {
 
   useScrollToAnchorByParams({
     refBenefits,
-    refProjectStructure,
+    refProjectArchitecture,
     refAtoms,
     refMolecules,
     refOrganisms,
@@ -123,7 +123,7 @@ function AtomicDesign() {
 
                   <HighlighterCard text="As pages/screens devem ser construídas diretamente no projeto do app e não dentro da biblioteca do design system. Os componentes devem ser construídos dentro da biblioteca somente até o nível dos templates." type="warning"/>
 
-                  <h6 ref={refProjectStructure} id="refProjectStructure">
+                  <h6 ref={refProjectArchitecture} id="refProjectArchitecture">
                     <a id="Prettier">
                       Estrutura de Pastas
                     </a>
@@ -133,7 +133,7 @@ function AtomicDesign() {
                     language="js"
                     style={a11yDark}
                     PreTag="div"
-                    children={CodeExamplesAtomicDesign.projectStructure}
+                    children={CodeExamplesAtomicDesign.ProjectArchitecture}
                   />
                   <br/>
 
@@ -324,7 +324,7 @@ function AtomicDesign() {
                       <ButtonLink
                         link="Estrutura de Pastas"
                         onClick={() =>
-                          changeAnchorLink("refProjectStructure")
+                          changeAnchorLink("refProjectArchitecture")
                         }
                       />
                     </li>

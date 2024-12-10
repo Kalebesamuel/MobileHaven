@@ -1,5 +1,5 @@
 const CodeExamplesAtomicDesign = {
-  projectStructure: `
+  ProjectArchitecture: `
 src/
 └── components/
     ├── atoms/

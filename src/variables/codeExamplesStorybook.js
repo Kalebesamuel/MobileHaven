@@ -2,7 +2,7 @@ const CodeExamplesStorybook = {
   install: `npm install -g verdaccio`,
   initServer: `verdaccio`,
   npmrc: `npm set registry http://localhost:4873`,
-  projectStructure: `
+  ProjectArchitecture: `
   design-system/
   src/
   ├── atoms/
