@@ -22,6 +22,7 @@ import HighlighterText from "components/Highlighters/HighlighterText";
 
 //= ==============================================================================================
 const StateManagement = () => {
+  const refInstallDeps = useRef(null);
   const refWhyUseReactQuery =  useRef(null);
   const refWhyUseZustand =  useRef(null);
   const refBenefits =  useRef(null);
@@ -33,6 +34,7 @@ const StateManagement = () => {
   const refZustand =  useRef(null);
 
   useScrollToAnchorByParams({
+    refInstallDeps,
     refWhyUseReactQuery,
     refWhyUseZustand,
     refBenefits,
@@ -342,9 +344,23 @@ const StateManagement = () => {
                       </tr>                      
                     </tbody>
                   </Table>   
-                                
+
                   <br />
                   <hr />
+                  <h6>
+                    <a id="refInstallDeps" ref={refInstallDeps}>
+                      Instalando as dependências
+                    </a>
+                  </h6>
+
+                  <SyntaxHighlighter
+                    language="js"
+                    style={a11yDark}
+                    PreTag="div"
+                    children={CodeExamplesStateManagement.installLibs}
+                  />
+                                
+                  <br />
                   <h6>
                     <a id="reactQuery" ref={refReactQuery}>
                       React Query
@@ -608,6 +624,12 @@ const StateManagement = () => {
                 <p>
                   <a className="text-muted">State Managament | React Query | Zustand</a>
                   <ul>
+                    <li>
+                      <ButtonLink
+                        link="Instalando as dependências"
+                        onClick={() => changeAnchorLink("refInstallDeps")}
+                      />
+                    </li>
                     <li>
                       <ButtonLink
                         link="Por que usar React Query para estados do server side?"
