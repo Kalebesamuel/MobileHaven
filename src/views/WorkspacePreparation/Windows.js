@@ -405,7 +405,7 @@ function Windows() {
 
                     <pre>
                       <SyntaxHighlighter
-                        language="js"
+                        language="bash"
                         style={a11yDark}
                         PreTag="div"
                         children={`yarn`}
@@ -422,7 +422,7 @@ function Windows() {
 
                     <pre>
                       <SyntaxHighlighter
-                        language="js"
+                        language="bash"
                         style={a11yDark}
                         PreTag="div"
                         children={
