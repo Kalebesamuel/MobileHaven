@@ -15,6 +15,7 @@ import EvologCheckin from "./views/Overview/EvologCheckin.js";
 import EvologCanhoto from "./views/Overview/EvologCanhoto.js";
 import Evolog4PL from "./views/Overview/Evolog4PL.js";
 import EvologHoraCerta from "views/Overview/EvologHoraCerta.js";
+import EvologVira from "views/Overview/EvologVira.js";
 
 //-------------------------------------------------------------------------
 import CreatingProject from "./views/Help/CreatingProject.js";
@@ -119,6 +120,13 @@ var dashRoutes = [
         path: "/overview/EvologHoraCerta",
         name: "Evolog Hora Certa",
         component: EvologHoraCerta,
+        layout: "/admin",
+        dropdownKeepActived: true,
+      },
+      {
+        path: "/overview/EvologVira",
+        name: "Evolog Vira",
+        component: EvologVira,
         layout: "/admin",
         dropdownKeepActived: true,
       },
@@ -505,6 +513,14 @@ var dashRoutes = [
     path: "/overview/EvologHoraCerta",
     name: "Evolog Hora Certa",
     component: EvologHoraCerta,
+    layout: "/admin",
+    invisible: true,
+    dropdownKeepActived: true,
+  },
+  {
+    path: "/overview/EvologVira",
+    name: "Evolog Vira",
+    component: EvologVira,
     layout: "/admin",
     invisible: true,
     dropdownKeepActived: true,
