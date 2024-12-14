@@ -185,17 +185,6 @@ const MMKV = () => {
                     children={CodeExamplesMMKV.installLibs}
                   />
                   <br/>
-                                    
-                  <p>
-                    <HighlighterText search="app.json">Se estiver usando Expo, adicione o plugin MMKV no app.json ou app.config.js</HighlighterText>
-                  </p>
-                  <SyntaxHighlighter
-                    language="js"
-                    style={a11yDark}
-                    PreTag="div"
-                    children={CodeExamplesMMKV.mmkvPuglin}
-                  />
-                  <br/>
 
                   <p>
                     <HighlighterText search="EAS Build">Caso esteja utilizando Expo Managed Workflow, é necessário usar o EAS Build para compilar o código nativo</HighlighterText>

@@ -1,39 +1,42 @@
 const CodeExamplesStateManagement = {
-  installLibs: `yarn add @tanstack/react-query zustand`,
+  installLibs: `yarn add @tanstack/react-query zustand @tanstack/query-sync-storage-persister @tanstack/react-query-persist-client`,
   reactQueryConfigStart: `
-  import { QueryClient } from '@tanstack/react-query';
-  import { storage } from './mmkv';
-  import { createAsyncStoragePersistor } from '@tanstack/query-async-storage-persister';
-  import { persistQueryClient } from '@tanstack/react-query-persist-client';
-
-  const queryClient = new QueryClient();
-
-  export const setupReactQuery = () => {
-    const persistor = createSyncStoragePersister({
+  import { QueryClient } from "@tanstack/react-query";
+  import { mmkvStorage } from "./mmkv-config";
+  import { persistQueryClient } from "@tanstack/react-query-persist-client";
+  import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
+  
+  const persistor = createSyncStoragePersister({
       storage: {
-        setItem: (key, value) => storage.set(key, value),
-        getItem: (key) => storage.getString(key) || null,
-        removeItem: (key) => storage.delete(key),
+          setItem: (key, value) => mmkvStorage.set(key, value),
+          getItem: key => mmkvStorage.getString(key) || null,
+          removeItem: key => mmkvStorage.delete(key),
       },
-    });
-
-    persistQueryClient({
+  });
+  
+  const queryClient = new QueryClient({
+      defaultOptions: {
+          queries: {
+              // Adjust query behavior as needed
+              staleTime: 1000 * 60 * 5, // 5 minutes
+          },
+      },
+  });
+  
+  persistQueryClient({
       queryClient,
       persistor,
-      maxAge: 1000 * 60 * 60 * 24, // 24 hours
-    });
-  };
-
+      maxAge: 0,
+  });
+  
   export { queryClient };
 `,
 addQueryClientProvider: `
 import React from 'react';
 import { QueryClientProvider } from '@tanstack/react-query';
-import { queryClient, setupReactQuery } from './src/lib/react-query';
+import { queryClient } from './src/lib/react-query';
 
 export default function App() {
-  setupReactQuery(); // Configure para suporte offline
-
   return (
     <QueryClientProvider client={queryClient}>
       {/* Restante da sua aplicação */}
@@ -91,7 +94,7 @@ persistQueryClient({
 });
 `,
 zustandStartConfig: `
-import create from 'zustand';
+import { create } from "zustand";
 
 interface AppState {
   theme: 'light' | 'dark';
@@ -154,7 +157,7 @@ export const UserScreen = () => {
 };
 `,
 zustandWithMMKV: `
-import create from 'zustand';
+import { create } from "zustand";
 import { persist } from 'zustand/middleware';
 import { storage } from './mmkv';
 
