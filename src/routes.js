@@ -14,6 +14,8 @@ import EvologEva from "./views/Overview/EvologEva.js";
 import EvologCheckin from "./views/Overview/EvologCheckin.js";
 import EvologCanhoto from "./views/Overview/EvologCanhoto.js";
 import Evolog4PL from "./views/Overview/Evolog4PL.js";
+import EvologHoraCerta from "views/Overview/EvologHoraCerta.js";
+import EvologVira from "views/Overview/EvologVira.js";
 
 //-------------------------------------------------------------------------
 import CreatingProject from "./views/Help/CreatingProject.js";
@@ -62,6 +64,7 @@ import Hooks from "./views/Help/Hooks.js";
 import StateManagement from "./views/Help/StateManagement.js";
 import MMKV from "./views/Help/MMKV.js";
 import Forms from "./views/Help/Forms.js";
+import Unistyles from "views/Help/Unistyles.js";
 
 var dashRoutes = [
   {
@@ -113,6 +116,20 @@ var dashRoutes = [
         layout: "/admin",
         dropdownKeepActived: true,
       },
+      {
+        path: "/overview/EvologHoraCerta",
+        name: "Evolog Hora Certa",
+        component: EvologHoraCerta,
+        layout: "/admin",
+        dropdownKeepActived: true,
+      },
+      {
+        path: "/overview/EvologVira",
+        name: "Evolog Vira",
+        component: EvologVira,
+        layout: "/admin",
+        dropdownKeepActived: true,
+      },
       // {
       //   path: "/overview/Evolog4PL",
       //   name: "Evolog 4PL",
@@ -161,13 +178,13 @@ var dashRoutes = [
         name: "DoD (Definition of Done)",
         component: DefinitionOfDone,
         layout: "/admin",
-      },  
+      },
       {
         path: "/documentation/LogisticDictionary",
         name: "Logistic Dictionary",
         component: LogisticDictionary,
         layout: "/admin",
-      },         
+      },
       {
         path: "/documentation/Code",
         name: "Code/Rules",
@@ -191,7 +208,7 @@ var dashRoutes = [
         name: "Workflow",
         component: Workflow,
         layout: "/admin",
-      }
+      },
     ],
   },
   {
@@ -289,6 +306,12 @@ var dashRoutes = [
         path: "/help/Forms",
         name: "React Hook Form + Zod",
         component: Forms,
+        layout: "/admin",
+      },
+      {
+        path: "/help/Unistyles",
+        name: "Unistyles",
+        component: Unistyles,
         layout: "/admin",
       },
     ],
@@ -487,6 +510,22 @@ var dashRoutes = [
     dropdownKeepActived: true,
   },
   {
+    path: "/overview/EvologHoraCerta",
+    name: "Evolog Hora Certa",
+    component: EvologHoraCerta,
+    layout: "/admin",
+    invisible: true,
+    dropdownKeepActived: true,
+  },
+  {
+    path: "/overview/EvologVira",
+    name: "Evolog Vira",
+    component: EvologVira,
+    layout: "/admin",
+    invisible: true,
+    dropdownKeepActived: true,
+  },
+  {
     path: "/documentation/DevelopmentMat",
     name: "Development Mat",
     component: DevelopmentMat,
@@ -575,14 +614,14 @@ var dashRoutes = [
     name: "Storybook",
     component: Storybook,
     layout: "/admin",
-    invisible: true
+    invisible: true,
   },
   {
     path: "/tools/AtomicDesign",
     name: "AtomicDesign",
     component: AtomicDesign,
     layout: "/admin",
-    invisible: true
+    invisible: true,
   },
   {
     path: "/tools/EnvironmentDivision",
@@ -743,7 +782,14 @@ var dashRoutes = [
     name: "React Hook Form + Zod",
     component: Forms,
     layout: "/admin",
-    invisible: true
+    invisible: true,
+  },
+  {
+    path: "/help/Unistyles",
+    name: "Unistyles",
+    component: Unistyles,
+    layout: "/admin",
+    invisible: true,
   },
   {
     path: "/documentation/LogisticDictionary",

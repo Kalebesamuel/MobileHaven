@@ -9,6 +9,7 @@ import PanelHeader from "../../components/PanelHeader/PanelHeader.js";
 import ButtonLink from "../../components/Buttons/ButtonLink";
 
 import { useScrollToAnchorByParams, useChangeAnchorLink } from "utils";
+import codeExampleWindows from "variables/codeExampleWindows.js";
 
 //= ==============================================================================================
 function Windows() {
@@ -87,13 +88,13 @@ function Windows() {
                       <li class="list-group-item ">
                         <h5 class="list-group-item-heading">
                           {" "}
-                          Java - jre1.8.0_211{" "}
+                          Java - jdk-17.0.10{" "}
                         </h5>
                         <p>Faça login para iniciar o Download</p>
                         <a
                           class="list-group-item-text"
                           className="text-muted"
-                          href="https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u211-b12/478a62b7d4e34b78b671c754eaaf38ab/jre-8u211-windows-x64.exe"
+                          href="https://download.oracle.com/java/17/archive/jdk-17.0.10_windows-x64_bin.exe"
                           target="_blank"
                         >
                           - Donwload
@@ -102,12 +103,12 @@ function Windows() {
                       <li class="list-group-item">
                         <h5 class="list-group-item-heading">
                           {" "}
-                          NodeJS - 10.17.0{" "}
+                          NodeJS - 20.15.1{" "}
                         </h5>
                         <a
                           class="list-group-item-text"
                           className="text-muted"
-                          href="https://nodejs.org/dist/v10.17.0/node-v10.17.0-x64.msi"
+                          href="https://nodejs.org/dist/v20.15.1/win-x64/node.exe"
                           target="_blank"
                         >
                           - Donwload
@@ -183,71 +184,13 @@ function Windows() {
                         </a>
                       </li>
                       <li class="list-group-item">
-                        <h5 class="list-group-item-heading">
-                          {" "}
-                          Bizagi - Última Versão{" "}
-                        </h5>
-                        <a
-                          class="list-group-item-text"
-                          className="text-muted"
-                          href="https://www.bizagi.com/pt/plataforma/modeler"
-                          target="_blank"
-                        >
-                          - Donwload
-                        </a>
-                      </li>
-                      <li class="list-group-item">
-                        <h5 class="list-group-item-heading"> Yarn - 1.22.5 </h5>
-                        <a
-                          class="list-group-item-text"
-                          className="text-muted"
-                          href="https://github.com/yarnpkg/yarn/releases/download/v1.22.5/yarn-1.22.5.msi"
-                          target="_blank"
-                        >
-                          - Donwload
-                        </a>
-                      </li>
-                      <li class="list-group-item">
-                        <h5 class="list-group-item-heading">
-                          {" "}
-                          ConEmu - Última Versão{" "}
-                        </h5>
-                        <a
-                          class="list-group-item-text"
-                          className="text-muted"
-                          href="https://conemu.github.io/en/Downloads.html"
-                          target="_blank"
-                        >
-                          - Donwload
-                        </a>
-                      </li>
-                      <li class="list-group-item">
-                        <h5 class="list-group-item-heading">
-                          {" "}
-                          Appium - Última Versão{" "}
-                        </h5>
-                        <a
-                          class="list-group-item-text"
-                          className="text-muted"
-                          href="https://github.com/appium/appium-desktop/releases/tag/v1.20.2"
-                          target="_blank"
-                        >
-                          - Donwload
-                        </a>
-                      </li>
-                      <li class="list-group-item">
-                        <h5 class="list-group-item-heading">
-                          {" "}
-                          IntelliJ IDEA - Última Versão{" "}
-                        </h5>
-                        <a
-                          class="list-group-item-text"
-                          className="text-muted"
-                          href="https://www.jetbrains.com/pt-br/idea/download/#section=windows"
-                          target="_blank"
-                        >
-                          - Donwload
-                        </a>
+                        <h5 class="list-group-item-heading"> Yarn - 1.22.19 </h5>
+                        <SyntaxHighlighter
+                            language="bash"
+                            style={a11yDark}
+                            PreTag="div"
+                            children={codeExampleWindows.yarn}
+                        />
                       </li>
                     </ul>
                   </div>
@@ -302,7 +245,7 @@ function Windows() {
                           <b>
                             <b>Valor: </b>
                           </b>
-                          C:\Program Files\Java\jre1.8.0_211{" "}
+                          C:\Program Files\Java\jdk-17{" "}
                         </p>
                       </li>
                       <li class="list-group-item">
@@ -385,7 +328,7 @@ function Windows() {
                       2. Crie uma pasta dentro de \Documents\
                     </p>
                     <p class="text-muted">
-                      3. Abra o ConEmu dentro desta pasta
+                      3. Abra o Git Bash dentro desta pasta
                     </p>
                     <p class="text-muted">4. Clone os seguintes repositórios</p>
                   </div>
@@ -456,16 +399,16 @@ function Windows() {
 
                   <div class="pl-3 mt-4">
                     <p class="text-muted">
-                      5. Após clonar os projetos, abra o conEmu dentro de cada
+                      5. Após clonar os projetos, abra o Git Bash dentro de cada
                       pasta, e execute o seguinte comando:
                     </p>
 
                     <pre>
                       <SyntaxHighlighter
-                        language="js"
+                        language="bash"
                         style={a11yDark}
                         PreTag="div"
-                        children={`npm install`}
+                        children={`yarn`}
                       />
                     </pre>
                   </div>
@@ -479,14 +422,20 @@ function Windows() {
 
                     <pre>
                       <SyntaxHighlighter
-                        language="js"
+                        language="bash"
                         style={a11yDark}
                         PreTag="div"
                         children={
-                          "npm i -g react-native-cli \nnpm i -g nodemon"
+                          "yarn add global react-native-cli \nyarn add global nodemon"
                         }
                       />
                     </pre>
+                  </div>
+                  
+                  <div class="pl-3 mt-4">
+                    <p class="text-muted">
+                      7. Após instalar as dependências com o Yarn, abra cada projeto no Android Studio (abra a pasta android do projeto) e dê Gradlew Sync e Rebuild Project.
+                    </p>
                   </div>
                 </p>
               </CardBody>
