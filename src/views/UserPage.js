@@ -1,37 +1,10 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  FormGroup,
-  Form,
-  Input,
-  Row,
-  Col,
-} from "reactstrap";
+import { Button, Card, CardHeader, CardBody, FormGroup, Form, Input, Row, Col } from 'reactstrap';
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+import PanelHeader from 'components/PanelHeader/PanelHeader.js';
 
 class User extends React.Component {
   render() {
@@ -62,18 +35,12 @@ class User extends React.Component {
                       <Col className="px-1" md="3">
                         <FormGroup>
                           <label>Username</label>
-                          <Input
-                            defaultValue="michael23"
-                            placeholder="Username"
-                            type="text"
-                          />
+                          <Input defaultValue="michael23" placeholder="Username" type="text" />
                         </FormGroup>
                       </Col>
                       <Col className="pl-1" md="4">
                         <FormGroup>
-                          <label htmlFor="exampleInputEmail1">
-                            Email address
-                          </label>
+                          <label htmlFor="exampleInputEmail1">Email address</label>
                           <Input placeholder="Email" type="email" />
                         </FormGroup>
                       </Col>
@@ -82,21 +49,13 @@ class User extends React.Component {
                       <Col className="pr-1" md="6">
                         <FormGroup>
                           <label>First Name</label>
-                          <Input
-                            defaultValue="Mike"
-                            placeholder="Company"
-                            type="text"
-                          />
+                          <Input defaultValue="Mike" placeholder="Company" type="text" />
                         </FormGroup>
                       </Col>
                       <Col className="pl-1" md="6">
                         <FormGroup>
                           <label>Last Name</label>
-                          <Input
-                            defaultValue="Andrew"
-                            placeholder="Last Name"
-                            type="text"
-                          />
+                          <Input defaultValue="Andrew" placeholder="Last Name" type="text" />
                         </FormGroup>
                       </Col>
                     </Row>
@@ -116,21 +75,13 @@ class User extends React.Component {
                       <Col className="pr-1" md="4">
                         <FormGroup>
                           <label>City</label>
-                          <Input
-                            defaultValue="Mike"
-                            placeholder="City"
-                            type="text"
-                          />
+                          <Input defaultValue="Mike" placeholder="City" type="text" />
                         </FormGroup>
                       </Col>
                       <Col className="px-1" md="4">
                         <FormGroup>
                           <label>Country</label>
-                          <Input
-                            defaultValue="Andrew"
-                            placeholder="Country"
-                            type="text"
-                          />
+                          <Input defaultValue="Andrew" placeholder="Country" type="text" />
                         </FormGroup>
                       </Col>
                       <Col className="pl-1" md="4">
@@ -162,7 +113,7 @@ class User extends React.Component {
             <Col md="4">
               <Card className="card-user">
                 <div className="image">
-                  <img alt="..." src={require("assets/img/bg5.jpg")} />
+                  <img alt="..." src={require('assets/img/bg5.jpg')} />
                 </div>
                 <CardBody>
                   <div className="author">
@@ -170,7 +121,7 @@ class User extends React.Component {
                       <img
                         alt="..."
                         className="avatar border-gray"
-                        src={require("assets/img/mike.jpg")}
+                        src={require('assets/img/mike.jpg')}
                       />
                       <h5 className="title">Mike Andrew</h5>
                     </a>
@@ -189,8 +140,7 @@ class User extends React.Component {
                     color="default"
                     href="#pablo"
                     onClick={(e) => e.preventDefault()}
-                    size="lg"
-                  >
+                    size="lg">
                     <i className="fab fa-facebook-f" />
                   </Button>
                   <Button
@@ -198,8 +148,7 @@ class User extends React.Component {
                     color="default"
                     href="#pablo"
                     onClick={(e) => e.preventDefault()}
-                    size="lg"
-                  >
+                    size="lg">
                     <i className="fab fa-twitter" />
                   </Button>
                   <Button
@@ -207,8 +156,7 @@ class User extends React.Component {
                     color="default"
                     href="#pablo"
                     onClick={(e) => e.preventDefault()}
-                    size="lg"
-                  >
+                    size="lg">
                     <i className="fab fa-google-plus-g" />
                   </Button>
                 </div>

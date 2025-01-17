@@ -1,28 +1,11 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 /*eslint-disable*/
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Nav } from "reactstrap";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Nav } from 'reactstrap';
 // javascript plugin used to create scrollbars on windows
-import PerfectScrollbar from "perfect-scrollbar";
+import PerfectScrollbar from 'perfect-scrollbar';
 
-import logo from "logo-white.svg";
+import logo from 'logo-white.svg';
 
 var ps;
 
@@ -38,13 +21,12 @@ class Sidebar extends React.Component {
   }
 
   openDropdown(key) {
-    this.state.dropdownActive =
-      key !== this.state.key ? true : !this.state.dropdownActive;
+    this.state.dropdownActive = key !== this.state.key ? true : !this.state.dropdownActive;
     this.state.key = key;
   }
 
   renderDropdown(prop, key, parentKey) {
-    console.log("prop.layout - ", prop.layout, " prop.path - ", prop.path);
+    console.log('prop.layout - ', prop.layout, ' prop.path - ', prop.path);
 
     return (
       <div>
@@ -52,16 +34,10 @@ class Sidebar extends React.Component {
           <li
             onClick={() => this.openDropdown(parentKey)}
             className={
-              this.activeRoute(prop.layout + prop.path) +
-              (prop.pro ? " active active-pro" : "")
+              this.activeRoute(prop.layout + prop.path) + (prop.pro ? ' active active-pro' : '')
             }
-            key={key}
-          >
-            <NavLink
-              to={prop.layout + prop.path}
-              className="nav-link"
-              activeClassName="active"
-            >
+            key={key}>
+            <NavLink to={prop.layout + prop.path} className="nav-link" activeClassName="active">
               <p class="mr-2 pl-5">{prop.name}</p>
             </NavLink>
           </li>
@@ -72,11 +48,11 @@ class Sidebar extends React.Component {
 
   // verifies if routeName is the one active (in browser input)
   activeRoute(routeName) {
-    return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
+    return this.props.location.pathname.indexOf(routeName) > -1 ? 'active' : '';
   }
 
   componentDidMount() {
-    if (navigator.platform.indexOf("Win") > -1) {
+    if (navigator.platform.indexOf('Win') > -1) {
       ps = new PerfectScrollbar(this.refs.sidebar, {
         suppressScrollX: true,
         suppressScrollY: false,
@@ -85,23 +61,18 @@ class Sidebar extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(
-      "Key: ",
-      this.state.key,
-      "DropdownActived: ",
-      this.state.dropdownActive
-    );
+    console.log('Key: ', this.state.key, 'DropdownActived: ', this.state.dropdownActive);
   }
 
   componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
+    if (navigator.platform.indexOf('Win') > -1) {
       ps.destroy();
     }
   }
 
   render() {
     return (
-      <div className="sidebar" data-color={"blue"}>
+      <div className="sidebar" data-color={'blue'}>
         <div className="logo">
           <a href="#" className="simple-text logo-mini" target="_blank">
             <div className="logo-img">
@@ -123,22 +94,18 @@ class Sidebar extends React.Component {
                 return (
                   <li
                     onClick={
-                      prop?.dropdown?.length > 0
-                        ? () => this.openDropdown(parentKey)
-                        : () => null
+                      prop?.dropdown?.length > 0 ? () => this.openDropdown(parentKey) : () => null
                     }
                     className={
                       this.activeRoute(prop.layout + prop.path) +
-                      (prop.pro ? " active active-pro" : "")
+                      (prop.pro ? ' active active-pro' : '')
                     }
-                    key={parentKey}
-                  >
+                    key={parentKey}>
                     <NavLink
                       to={prop.layout + prop.path}
                       className="nav-link"
-                      activeClassName="active"
-                    >
-                      <i className={"now-ui-icons " + prop.icon} />
+                      activeClassName="active">
+                      <i className={'now-ui-icons ' + prop.icon} />
                       <p>{prop.name}</p>
                     </NavLink>
 

@@ -1,23 +1,6 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
+import React from 'react';
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar } from 'react-chartjs-2';
 
 // reactstrap components
 import {
@@ -38,17 +21,17 @@ import {
   FormGroup,
   Input,
   UncontrolledTooltip,
-} from "reactstrap";
+} from 'reactstrap';
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+import PanelHeader from 'components/PanelHeader/PanelHeader.js';
 
 import {
   dashboardPanelChart,
   dashboardShippedProductsChart,
   dashboardAllProductsChart,
   dashboard24HoursPerformanceChart,
-} from "variables/charts.js";
+} from 'variables/charts.js';
 
 class Dashboard extends React.Component {
   render() {
@@ -56,12 +39,7 @@ class Dashboard extends React.Component {
       <>
         <PanelHeader
           size="lg"
-          content={
-            <Line
-              data={dashboardPanelChart.data}
-              options={dashboardPanelChart.options}
-            />
-          }
+          content={<Line data={dashboardPanelChart.data} options={dashboardPanelChart.options} />}
         />
         <div className="content">
           <Row>
@@ -73,17 +51,14 @@ class Dashboard extends React.Component {
                   <UncontrolledDropdown>
                     <DropdownToggle
                       className="btn-round btn-outline-default btn-icon"
-                      color="default"
-                    >
+                      color="default">
                       <i className="now-ui-icons loader_gear" />
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another Action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
-                      <DropdownItem className="text-danger">
-                        Remove data
-                      </DropdownItem>
+                      <DropdownItem className="text-danger">Remove data</DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                 </CardHeader>
@@ -97,8 +72,7 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                    <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                    Updated
+                    <i className="now-ui-icons arrows-1_refresh-69" /> Just Updated
                   </div>
                 </CardFooter>
               </Card>
@@ -111,17 +85,14 @@ class Dashboard extends React.Component {
                   <UncontrolledDropdown>
                     <DropdownToggle
                       className="btn-round btn-outline-default btn-icon"
-                      color="default"
-                    >
+                      color="default">
                       <i className="now-ui-icons loader_gear" />
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another Action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
-                      <DropdownItem className="text-danger">
-                        Remove data
-                      </DropdownItem>
+                      <DropdownItem className="text-danger">Remove data</DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                 </CardHeader>
@@ -135,8 +106,7 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                    <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                    Updated
+                    <i className="now-ui-icons arrows-1_refresh-69" /> Just Updated
                   </div>
                 </CardFooter>
               </Card>
@@ -184,36 +154,27 @@ class Dashboard extends React.Component {
                             </FormGroup>
                           </td>
                           <td className="text-left">
-                            Sign contract for "What are conference organizers
-                            afraid of?"
+                            Sign contract for "What are conference organizers afraid of?"
                           </td>
                           <td className="td-actions text-right">
                             <Button
                               className="btn-round btn-icon btn-icon-mini btn-neutral"
                               color="info"
                               id="tooltip731609871"
-                              type="button"
-                            >
+                              type="button">
                               <i className="now-ui-icons ui-2_settings-90" />
                             </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip731609871"
-                            >
+                            <UncontrolledTooltip delay={0} target="tooltip731609871">
                               Edit Task
                             </UncontrolledTooltip>
                             <Button
                               className="btn-round btn-icon btn-icon-mini btn-neutral"
                               color="danger"
                               id="tooltip923217206"
-                              type="button"
-                            >
+                              type="button">
                               <i className="now-ui-icons ui-1_simple-remove" />
                             </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip923217206"
-                            >
+                            <UncontrolledTooltip delay={0} target="tooltip923217206">
                               Remove
                             </UncontrolledTooltip>
                           </td>
@@ -228,36 +189,27 @@ class Dashboard extends React.Component {
                             </FormGroup>
                           </td>
                           <td className="text-left">
-                            Lines From Great Russian Literature? Or E-mails From
-                            My Boss?
+                            Lines From Great Russian Literature? Or E-mails From My Boss?
                           </td>
                           <td className="td-actions text-right">
                             <Button
                               className="btn-round btn-icon btn-icon-mini btn-neutral"
                               color="info"
                               id="tooltip907509347"
-                              type="button"
-                            >
+                              type="button">
                               <i className="now-ui-icons ui-2_settings-90" />
                             </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip907509347"
-                            >
+                            <UncontrolledTooltip delay={0} target="tooltip907509347">
                               Edit Task
                             </UncontrolledTooltip>
                             <Button
                               className="btn-round btn-icon btn-icon-mini btn-neutral"
                               color="danger"
                               id="tooltip496353037"
-                              type="button"
-                            >
+                              type="button">
                               <i className="now-ui-icons ui-1_simple-remove" />
                             </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip496353037"
-                            >
+                            <UncontrolledTooltip delay={0} target="tooltip496353037">
                               Remove
                             </UncontrolledTooltip>
                           </td>
@@ -272,37 +224,28 @@ class Dashboard extends React.Component {
                             </FormGroup>
                           </td>
                           <td className="text-left">
-                            Flooded: One year later, assessing what was lost and
-                            what was found when a ravaging rain swept through
-                            metro Detroit
+                            Flooded: One year later, assessing what was lost and what was found when
+                            a ravaging rain swept through metro Detroit
                           </td>
                           <td className="td-actions text-right">
                             <Button
                               className="btn-round btn-icon btn-icon-mini btn-neutral"
                               color="info"
                               id="tooltip326247652"
-                              type="button"
-                            >
+                              type="button">
                               <i className="now-ui-icons ui-2_settings-90" />
                             </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip326247652"
-                            >
+                            <UncontrolledTooltip delay={0} target="tooltip326247652">
                               Edit Task
                             </UncontrolledTooltip>
                             <Button
                               className="btn-round btn-icon btn-icon-mini btn-neutral"
                               color="danger"
                               id="tooltip389516969"
-                              type="button"
-                            >
+                              type="button">
                               <i className="now-ui-icons ui-1_simple-remove" />
                             </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip389516969"
-                            >
+                            <UncontrolledTooltip delay={0} target="tooltip389516969">
                               Remove
                             </UncontrolledTooltip>
                           </td>
@@ -314,8 +257,7 @@ class Dashboard extends React.Component {
                 <CardFooter>
                   <hr />
                   <div className="stats">
-                    <i className="now-ui-icons loader_refresh spin" /> Updated 3
-                    minutes ago
+                    <i className="now-ui-icons loader_refresh spin" /> Updated 3 minutes ago
                   </div>
                 </CardFooter>
               </Card>

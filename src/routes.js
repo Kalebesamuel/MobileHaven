@@ -1,133 +1,141 @@
-import Dashboard from "views/Dashboard.js";
-import Notifications from "views/Notifications.js";
-import Typography from "views/Typography.js";
-import TableList from "views/TableList.js";
-import Maps from "views/Maps.js";
-import Upgrade from "views/Upgrade.js";
-import UserPage from "views/UserPage.js";
+import Dashboard from 'views/Dashboard.js';
+import Notifications from 'views/Notifications.js';
+import Typography from 'views/Typography.js';
+import OurCulture from 'views/OurCulture.js';
+import TableList from 'views/TableList.js';
+import Maps from 'views/Maps.js';
+import Upgrade from 'views/Upgrade.js';
+import UserPage from 'views/UserPage.js';
 
 //-------------------------------------------------------------------------
-import EvologMotorista from "./views/Overview/EvologMotorista.js";
-import EvologComercial from "./views/Overview/EvologComercial.js";
-import EvologChecklist from "./views/Overview/EvologChecklist.js";
-import EvologEva from "./views/Overview/EvologEva.js";
-import EvologCheckin from "./views/Overview/EvologCheckin.js";
-import EvologCanhoto from "./views/Overview/EvologCanhoto.js";
-import Evolog4PL from "./views/Overview/Evolog4PL.js";
-import EvologHoraCerta from "views/Overview/EvologHoraCerta.js";
-import EvologVira from "views/Overview/EvologVira.js";
+import EvologMotorista from './views/Overview/EvologMotorista.js';
+import EvologComercial from './views/Overview/EvologComercial.js';
+import EvologChecklist from './views/Overview/EvologChecklist.js';
+import EvologEva from './views/Overview/EvologEva.js';
+import EvologCheckin from './views/Overview/EvologCheckin.js';
+import EvologCanhoto from './views/Overview/EvologCanhoto.js';
+import Evolog4PL from './views/Overview/Evolog4PL.js';
+import EvologHoraCerta from 'views/Overview/EvologHoraCerta.js';
+import EvologVira from 'views/Overview/EvologVira.js';
 
 //-------------------------------------------------------------------------
-import CreatingProject from "./views/Help/CreatingProject.js";
-import CreatingRepository from "./views/Help/CreatingRepository";
-import GeneratingApkAab from "./views/Help/GeneratingApkAab";
-import GeneratingKeystore from "./views/Help/GeneratingKeystore";
-import Code from "./views/Documentation/Code.js";
-import Components from "./views/Documentation/Components.js";
-import ProjectArchitecture from "./views/Documentation/ProjectArchitecture.js";
-import Workflow from "./views/Documentation/Workflow.js";
-import DevelopmentMat from "./views/Documentation/DevelopmentMat";
-import DefinitionOfDone from "./views/Documentation/DefinitionOfDone";
-import LogisticDictionary from "./views/Documentation/LogisticDictionary";
+import CreatingProject from './views/Help/CreatingProject.js';
+import CreatingRepository from './views/Help/CreatingRepository';
+import GeneratingApkAab from './views/Help/GeneratingApkAab';
+import GeneratingKeystore from './views/Help/GeneratingKeystore';
+import Code from './views/Documentation/Code.js';
+import Components from './views/Documentation/Components.js';
+import ProjectArchitecture from './views/Documentation/ProjectArchitecture.js';
+import Workflow from './views/Documentation/Workflow.js';
+import DevelopmentMat from './views/Documentation/DevelopmentMat';
+import DefinitionOfDone from './views/Documentation/DefinitionOfDone';
+import LogisticDictionary from './views/Documentation/LogisticDictionary';
 
 //-------------------------------------------------------------------------
-import AtomicDesign from "./views/Tools/AtomicDesign";
-import Storybook from "./views/Tools/Storybook.js";
-import EnvironmentDivision from "./views/Tools/EnvironmentDivision.js";
-import CodePush from "./views/Tools/CodePush.js";
-import Prettier from "./views/Tools/Prettier.js";
-import ESLint from "./views/Tools/ESLint.js";
-import Husky from "./views/Tools/Husky.js";
-import Analytics from "./views/Tools/Analytics.js";
-import Crashlytics from "./views/Tools/Crashlytics.js";
-import Commitizen from "./views/Tools/Commitizen.js";
-import Pipeline from "./views/Tools/Pipeline.js";
-import Fastlane from "./views/Tools/Fastlane.js";
+import AtomicDesign from './views/Tools/AtomicDesign';
+import Storybook from './views/Tools/Storybook.js';
+import EnvironmentDivision from './views/Tools/EnvironmentDivision.js';
+import CodePush from './views/Tools/CodePush.js';
+import Prettier from './views/Tools/Prettier.js';
+import ESLint from './views/Tools/ESLint.js';
+import Husky from './views/Tools/Husky.js';
+import Analytics from './views/Tools/Analytics.js';
+import Crashlytics from './views/Tools/Crashlytics.js';
+import Commitizen from './views/Tools/Commitizen.js';
+import Pipeline from './views/Tools/Pipeline.js';
+import Fastlane from './views/Tools/Fastlane.js';
 
 //-------------------------------------------------------------------------
-import Windows from "./views/WorkspacePreparation/Windows.js";
-import Mac from "./views/WorkspacePreparation/Mac.js";
+import Windows from './views/WorkspacePreparation/Windows.js';
+import Mac from './views/WorkspacePreparation/Mac.js';
 
 //-------------------------------------------------------------------------
-import NativeModulesAndroid from "./views/Components/NativeModulesAndroid.js";
-import NativeModulesIos from "./views/Components/NativeModulesIos.js";
+import NativeModulesAndroid from './views/Components/NativeModulesAndroid.js';
+import NativeModulesIos from './views/Components/NativeModulesIos.js';
 
 //-------------------------------------------------------------------------
-import Navegacao from "./views/Help/Navegacao.js";
-import Redux from "./views/Help/Redux.js";
-import Componente from "./views/Help/Componente.js";
-import Logica from "./views/Help/Logica.js";
-import Flatlist from "./views/Help/Flatlist.js";
-import Camera from "./views/Help/Camera.js";
-import Axios from "./views/Help/Axios.js";
-import Hooks from "./views/Help/Hooks.js";
-import StateManagement from "./views/Help/StateManagement.js";
-import MMKV from "./views/Help/MMKV.js";
-import Forms from "./views/Help/Forms.js";
-import Unistyles from "views/Help/Unistyles.js";
+import Navegacao from './views/Help/Navegacao.js';
+import Redux from './views/Help/Redux.js';
+import Componente from './views/Help/Componente.js';
+import Logica from './views/Help/Logica.js';
+import Flatlist from './views/Help/Flatlist.js';
+import Camera from './views/Help/Camera.js';
+import Axios from './views/Help/Axios.js';
+import Hooks from './views/Help/Hooks.js';
+import StateManagement from './views/Help/StateManagement.js';
+import MMKV from './views/Help/MMKV.js';
+import Forms from './views/Help/Forms.js';
+import Unistyles from 'views/Help/Unistyles.js';
 
 var dashRoutes = [
   {
-    path: "/overview/EvologMotorista",
-    name: "Overview",
-    icon: "text_align-left",
+    path: '/our-culture',
+    name: 'Our Culture',
+    icon: 'objects_globe',
+    component: OurCulture,
+    layout: '/admin',
+  },
+  {
+    path: '/overview/EvologMotorista',
+    name: 'Overview',
+    icon: 'text_align-left',
     component: EvologMotorista,
-    layout: "/admin",
+    layout: '/admin',
     dropdown: [
       {
-        path: "/overview/EvologMotorista",
-        name: "Evolog Motorista",
+        path: '/overview/EvologMotorista',
+        name: 'Evolog Motorista',
         component: EvologMotorista,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       {
-        path: "/overview/EvologComercial",
-        name: "Evolog Comercial",
+        path: '/overview/EvologComercial',
+        name: 'Evolog Comercial',
         component: EvologComercial,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       {
-        path: "/overview/EvologChecklist",
-        name: "Evolog Checklist",
+        path: '/overview/EvologChecklist',
+        name: 'Evolog Checklist',
         component: EvologChecklist,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       {
-        path: "/overview/EvologEva",
-        name: "Evolog Eva",
+        path: '/overview/EvologEva',
+        name: 'Evolog Eva',
         component: EvologEva,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       {
-        path: "/overview/EvologCheckin",
-        name: "Evolog Checkin",
+        path: '/overview/EvologCheckin',
+        name: 'Evolog Checkin',
         component: EvologCheckin,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       {
-        path: "/overview/EvologCanhoto",
-        name: "Evolog Canhoto",
+        path: '/overview/EvologCanhoto',
+        name: 'Evolog Canhoto',
         component: EvologCanhoto,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       {
-        path: "/overview/EvologHoraCerta",
-        name: "Evolog Hora Certa",
+        path: '/overview/EvologHoraCerta',
+        name: 'Evolog Hora Certa',
         component: EvologHoraCerta,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       {
-        path: "/overview/EvologVira",
-        name: "Evolog Vira",
+        path: '/overview/EvologVira',
+        name: 'Evolog Vira',
         component: EvologVira,
-        layout: "/admin",
+        layout: '/admin',
         dropdownKeepActived: true,
       },
       // {
@@ -140,56 +148,56 @@ var dashRoutes = [
     ],
   },
   {
-    path: "/workspacePreparation/Windows",
-    name: "Workspace Preparation",
-    icon: "business_briefcase-24",
+    path: '/workspacePreparation/Windows',
+    name: 'Workspace Preparation',
+    icon: 'business_briefcase-24',
     component: Windows,
-    layout: "/admin",
+    layout: '/admin',
     dropdown: [
       {
-        path: "/workspacePreparation/Windows",
-        name: "Windows OS",
+        path: '/workspacePreparation/Windows',
+        name: 'Windows OS',
         component: Windows,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/workspacePreparation/Mac",
-        name: " Mac OS",
+        path: '/workspacePreparation/Mac',
+        name: ' Mac OS',
         component: Mac,
-        layout: "/admin",
+        layout: '/admin',
       },
     ],
   },
   {
-    path: "/documentation/Code",
-    name: "Documentation",
-    icon: "files_box",
+    path: '/documentation/Code',
+    name: 'Documentation',
+    icon: 'files_box',
     component: Code,
-    layout: "/admin",
+    layout: '/admin',
     dropdown: [
       {
-        path: "/documentation/DevelopmentMat",
-        name: "Development Mat",
+        path: '/documentation/DevelopmentMat',
+        name: 'Development Mat',
         component: DevelopmentMat,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/documentation/DefinitionOfDone",
-        name: "DoD (Definition of Done)",
+        path: '/documentation/DefinitionOfDone',
+        name: 'DoD (Definition of Done)',
         component: DefinitionOfDone,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/documentation/LogisticDictionary",
-        name: "Logistic Dictionary",
+        path: '/documentation/LogisticDictionary',
+        name: 'Logistic Dictionary',
         component: LogisticDictionary,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/documentation/Code",
-        name: "Code/Rules",
+        path: '/documentation/Code',
+        name: 'Code/Rules',
         component: Code,
-        layout: "/admin",
+        layout: '/admin',
       },
       // {
       //   path: "/documentation/Components",
@@ -198,202 +206,202 @@ var dashRoutes = [
       //   layout: "/admin",
       // },
       {
-        path: "/documentation/ProjectArchitecture",
-        name: "Project Architecture",
+        path: '/documentation/ProjectArchitecture',
+        name: 'Project Architecture',
         component: ProjectArchitecture,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/documentation/Workflow",
-        name: "Workflow",
+        path: '/documentation/Workflow',
+        name: 'Workflow',
         component: Workflow,
-        layout: "/admin",
+        layout: '/admin',
       },
     ],
   },
   {
-    icon: "objects_support-17",
-    path: "/help/CreatingProject",
-    name: "Help",
+    icon: 'objects_support-17',
+    path: '/help/CreatingProject',
+    name: 'Help',
     component: CreatingProject,
-    layout: "/admin",
+    layout: '/admin',
     dropdown: [
       {
-        path: "/help/CreatingProject",
-        name: "Generating a project",
+        path: '/help/CreatingProject',
+        name: 'Generating a project',
         component: CreatingProject,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/CreatingRepository",
-        name: "Creating Repositories",
+        path: '/help/CreatingRepository',
+        name: 'Creating Repositories',
         component: CreatingRepository,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/GeneratingApkAab",
-        name: "Generating apk/aab",
+        path: '/help/GeneratingApkAab',
+        name: 'Generating apk/aab',
         component: GeneratingApkAab,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/GeneratingKeystore",
-        name: "Generating Keystore",
+        path: '/help/GeneratingKeystore',
+        name: 'Generating Keystore',
         component: GeneratingKeystore,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Component",
-        name: "Component",
+        path: '/help/Component',
+        name: 'Component',
         component: Componente,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Logic",
-        name: "Logic",
+        path: '/help/Logic',
+        name: 'Logic',
         component: Logica,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Redux",
-        name: "Redux",
+        path: '/help/Redux',
+        name: 'Redux',
         component: Redux,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Navigation",
-        name: "Navigation",
+        path: '/help/Navigation',
+        name: 'Navigation',
         component: Navegacao,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Flatlist",
-        name: "Flatlist",
+        path: '/help/Flatlist',
+        name: 'Flatlist',
         component: Flatlist,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Camera",
-        name: "Câmera",
+        path: '/help/Camera',
+        name: 'Câmera',
         component: Camera,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Axios",
-        name: "Axios",
+        path: '/help/Axios',
+        name: 'Axios',
         component: Axios,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Hooks",
-        name: "Hooks",
+        path: '/help/Hooks',
+        name: 'Hooks',
         component: Hooks,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/StateManagement",
-        name: "React Query | Zustand",
+        path: '/help/StateManagement',
+        name: 'React Query | Zustand',
         component: StateManagement,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/MMKV",
-        name: "MMKV",
+        path: '/help/MMKV',
+        name: 'MMKV',
         component: MMKV,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Forms",
-        name: "React Hook Form + Zod",
+        path: '/help/Forms',
+        name: 'React Hook Form + Zod',
         component: Forms,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/help/Unistyles",
-        name: "Unistyles",
+        path: '/help/Unistyles',
+        name: 'Unistyles',
         component: Unistyles,
-        layout: "/admin",
+        layout: '/admin',
       },
     ],
   },
   {
-    icon: "objects_spaceship",
-    path: "/tools/AtomicDesign",
-    name: "Tools",
+    icon: 'objects_spaceship',
+    path: '/tools/AtomicDesign',
+    name: 'Tools',
     component: AtomicDesign,
-    layout: "/admin",
+    layout: '/admin',
     dropdown: [
       {
-        path: "/tools/AtomicDesign",
-        name: "Atomic Design",
+        path: '/tools/AtomicDesign',
+        name: 'Atomic Design',
         component: AtomicDesign,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Storybook",
-        name: "Storybook",
+        path: '/tools/Storybook',
+        name: 'Storybook',
         component: Storybook,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/EnvironmentDivision",
-        name: "Divisão de ambientes",
+        path: '/tools/EnvironmentDivision',
+        name: 'Divisão de ambientes',
         component: EnvironmentDivision,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/CodePush",
-        name: "CodePush (Deprecated)",
+        path: '/tools/CodePush',
+        name: 'CodePush (Deprecated)',
         component: CodePush,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Crashlytics",
-        name: "Crashlytics (Deprecated)",
+        path: '/tools/Crashlytics',
+        name: 'Crashlytics (Deprecated)',
         component: Crashlytics,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Analytics",
-        name: "Analytics (Deprecated)",
+        path: '/tools/Analytics',
+        name: 'Analytics (Deprecated)',
         component: Analytics,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/ESLint",
-        name: "ESLint",
+        path: '/tools/ESLint',
+        name: 'ESLint',
         component: ESLint,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Prettier",
-        name: "Prettier",
+        path: '/tools/Prettier',
+        name: 'Prettier',
         component: Prettier,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Husky",
-        name: "Husky",
+        path: '/tools/Husky',
+        name: 'Husky',
         component: Husky,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Commitizen",
-        name: "Commitizen",
+        path: '/tools/Commitizen',
+        name: 'Commitizen',
         component: Commitizen,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Pipeline",
-        name: "Pipeline",
+        path: '/tools/Pipeline',
+        name: 'Pipeline',
         component: Pipeline,
-        layout: "/admin",
+        layout: '/admin',
       },
       {
-        path: "/tools/Fastlane",
-        name: "Fastlane",
+        path: '/tools/Fastlane',
+        name: 'Fastlane',
         component: Fastlane,
-        layout: "/admin",
+        layout: '/admin',
       },
     ],
   },
@@ -419,11 +427,11 @@ var dashRoutes = [
   //   ],
   // },
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "design_app",
+    path: '/dashboard',
+    name: 'Dashboard',
+    icon: 'design_app',
     component: Dashboard,
-    layout: "/admin",
+    layout: '/admin',
   },
   // {
   //   path: "/notifications",
@@ -447,103 +455,103 @@ var dashRoutes = [
   //   layout: "/admin",
   // },
   {
-    path: "/typography",
-    name: "Typography",
-    icon: "design-2_ruler-pencil",
+    path: '/typography',
+    name: 'Typography',
+    icon: 'design-2_ruler-pencil',
     component: Typography,
-    layout: "/admin",
+    layout: '/admin',
   },
   {
-    path: "/overview/EvologMotorista",
-    name: "Evolog Motorista",
+    path: '/overview/EvologMotorista',
+    name: 'Evolog Motorista',
     component: EvologMotorista,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
     dropdownKeepActived: true,
   },
   {
-    path: "/overview/EvologComercial",
-    name: "Evolog Comercial",
+    path: '/overview/EvologComercial',
+    name: 'Evolog Comercial',
     component: EvologComercial,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
     dropdownKeepActived: true,
   },
   {
-    path: "/overview/EvologChecklist",
-    name: "Evolog Checklist",
+    path: '/overview/EvologChecklist',
+    name: 'Evolog Checklist',
     component: EvologChecklist,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
     dropdownKeepActived: true,
   },
   {
-    path: "/overview/EvologEva",
-    name: "Evolog Eva",
+    path: '/overview/EvologEva',
+    name: 'Evolog Eva',
     component: EvologEva,
-    layout: "/admin",
+    layout: '/admin',
     dropdownKeepActived: true,
     invisible: true,
   },
   {
-    path: "/overview/EvologCheckin",
-    name: "Evolog Checkin",
+    path: '/overview/EvologCheckin',
+    name: 'Evolog Checkin',
     component: EvologCheckin,
-    layout: "/admin",
+    layout: '/admin',
     dropdownKeepActived: true,
     invisible: true,
   },
   {
-    path: "/overview/EvologCanhoto",
-    name: "Evolog Canhoto",
+    path: '/overview/EvologCanhoto',
+    name: 'Evolog Canhoto',
     component: EvologCanhoto,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
     dropdownKeepActived: true,
   },
   {
-    path: "/overview/Evolog4PL",
-    name: "Evolog 4PL",
+    path: '/overview/Evolog4PL',
+    name: 'Evolog 4PL',
     component: Evolog4PL,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
     dropdownKeepActived: true,
   },
   {
-    path: "/overview/EvologHoraCerta",
-    name: "Evolog Hora Certa",
+    path: '/overview/EvologHoraCerta',
+    name: 'Evolog Hora Certa',
     component: EvologHoraCerta,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
     dropdownKeepActived: true,
   },
   {
-    path: "/overview/EvologVira",
-    name: "Evolog Vira",
+    path: '/overview/EvologVira',
+    name: 'Evolog Vira',
     component: EvologVira,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
     dropdownKeepActived: true,
   },
   {
-    path: "/documentation/DevelopmentMat",
-    name: "Development Mat",
+    path: '/documentation/DevelopmentMat',
+    name: 'Development Mat',
     component: DevelopmentMat,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/documentation/DefinitionOfDone",
-    name: "DoD (Definition of Done)",
+    path: '/documentation/DefinitionOfDone',
+    name: 'DoD (Definition of Done)',
     component: DefinitionOfDone,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/documentation/Code",
-    name: "Code/Rules",
+    path: '/documentation/Code',
+    name: 'Code/Rules',
     component: Code,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   // {
@@ -554,248 +562,248 @@ var dashRoutes = [
   //   invisible: true,
   // },
   {
-    path: "/documentation/ProjectArchitecture",
-    name: "Estruturação",
+    path: '/documentation/ProjectArchitecture',
+    name: 'Estruturação',
     component: ProjectArchitecture,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/documentation/Workflow",
-    name: "Workflow",
+    path: '/documentation/Workflow',
+    name: 'Workflow',
     component: Workflow,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/workspacePreparation/Windows",
-    name: "Windows OS",
+    path: '/workspacePreparation/Windows',
+    name: 'Windows OS',
     component: Windows,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/workspacePreparation/Mac",
-    name: " Mac OS",
+    path: '/workspacePreparation/Mac',
+    name: ' Mac OS',
     component: Mac,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/CreatingProject",
-    name: "Gerando um projeto",
+    path: '/help/CreatingProject',
+    name: 'Gerando um projeto',
     component: CreatingProject,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/CreatingRepository",
-    name: "Creating a repository",
+    path: '/help/CreatingRepository',
+    name: 'Creating a repository',
     component: CreatingRepository,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/GeneratingApkAab",
-    name: "Generating apk/aab",
+    path: '/help/GeneratingApkAab',
+    name: 'Generating apk/aab',
     component: GeneratingApkAab,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/GeneratingKeystore",
-    name: "Generating Keystore",
+    path: '/help/GeneratingKeystore',
+    name: 'Generating Keystore',
     component: GeneratingKeystore,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Storybook",
-    name: "Storybook",
+    path: '/tools/Storybook',
+    name: 'Storybook',
     component: Storybook,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/AtomicDesign",
-    name: "AtomicDesign",
+    path: '/tools/AtomicDesign',
+    name: 'AtomicDesign',
     component: AtomicDesign,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/EnvironmentDivision",
-    name: "Divisão de ambientes",
+    path: '/tools/EnvironmentDivision',
+    name: 'Divisão de ambientes',
     component: EnvironmentDivision,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/CodePush",
-    name: "CodePush",
+    path: '/tools/CodePush',
+    name: 'CodePush',
     component: CodePush,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Crashlytics",
-    name: "Crashlytics",
+    path: '/tools/Crashlytics',
+    name: 'Crashlytics',
     component: Crashlytics,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Analytics",
-    name: "Analytics",
+    path: '/tools/Analytics',
+    name: 'Analytics',
     component: Analytics,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/ESLint",
-    name: "ESLint",
+    path: '/tools/ESLint',
+    name: 'ESLint',
     component: ESLint,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Prettier",
-    name: "Prettier",
+    path: '/tools/Prettier',
+    name: 'Prettier',
     component: Prettier,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Husky",
-    name: "Husky",
+    path: '/tools/Husky',
+    name: 'Husky',
     component: Husky,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Commitizen",
-    name: "Commitizen",
+    path: '/tools/Commitizen',
+    name: 'Commitizen',
     component: Commitizen,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Pipeline",
-    name: "Pipeline",
+    path: '/tools/Pipeline',
+    name: 'Pipeline',
     component: Pipeline,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/tools/Fastlane",
-    name: "Fastlane",
+    path: '/tools/Fastlane',
+    name: 'Fastlane',
     component: Fastlane,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/components/native-modules/android",
-    name: "Native Modules - Android",
+    path: '/components/native-modules/android',
+    name: 'Native Modules - Android',
     component: NativeModulesAndroid,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/components/native-modules/ios",
-    name: "Native Modules - Ios",
+    path: '/components/native-modules/ios',
+    name: 'Native Modules - Ios',
     component: NativeModulesIos,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Component",
-    name: "Component",
+    path: '/help/Component',
+    name: 'Component',
     component: Componente,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Logic",
-    name: "Logic",
+    path: '/help/Logic',
+    name: 'Logic',
     component: Logica,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Redux",
-    name: "Redux",
+    path: '/help/Redux',
+    name: 'Redux',
     component: Redux,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Navigation",
-    name: "Navigation",
+    path: '/help/Navigation',
+    name: 'Navigation',
     component: Navegacao,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Flatlist",
-    name: "Flatlist",
+    path: '/help/Flatlist',
+    name: 'Flatlist',
     component: Flatlist,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Camera",
-    name: "Câmera",
+    path: '/help/Camera',
+    name: 'Câmera',
     component: Camera,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Axios",
-    name: "Axios",
+    path: '/help/Axios',
+    name: 'Axios',
     component: Axios,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Hooks",
-    name: "Hooks",
+    path: '/help/Hooks',
+    name: 'Hooks',
     component: Hooks,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/StateManagement",
-    name: "React Query | Zustand",
+    path: '/help/StateManagement',
+    name: 'React Query | Zustand',
     component: StateManagement,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/MMKV",
-    name: "MMKV",
+    path: '/help/MMKV',
+    name: 'MMKV',
     component: MMKV,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Forms",
-    name: "React Hook Form + Zod",
+    path: '/help/Forms',
+    name: 'React Hook Form + Zod',
     component: Forms,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/help/Unistyles",
-    name: "Unistyles",
+    path: '/help/Unistyles',
+    name: 'Unistyles',
     component: Unistyles,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
   {
-    path: "/documentation/LogisticDictionary",
-    name: "Logistic Dictionary",
+    path: '/documentation/LogisticDictionary',
+    name: 'Logistic Dictionary',
     component: LogisticDictionary,
-    layout: "/admin",
+    layout: '/admin',
     invisible: true,
   },
 ];

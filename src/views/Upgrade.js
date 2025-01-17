@@ -1,36 +1,10 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // reactstrap components
-import {
-  Table,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardHeader,
-  CardTitle,
-  Button,
-} from "reactstrap";
+import { Table, Row, Col, Card, CardBody, CardHeader, CardTitle, Button } from 'reactstrap';
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+import PanelHeader from 'components/PanelHeader/PanelHeader.js';
 
 class Upgrade extends Component {
   render() {
@@ -44,8 +18,8 @@ class Upgrade extends Component {
                 <CardHeader>
                   <CardTitle>Now UI Dashboard PRO React</CardTitle>
                   <p className="category">
-                    Are you looking for more components? Please check our
-                    Premium Version of Now UI Dashboard React.
+                    Are you looking for more components? Please check our Premium Version of Now UI
+                    Dashboard React.
                   </p>
                 </CardHeader>
                 <CardBody>
@@ -117,11 +91,7 @@ class Upgrade extends Component {
                       <tr>
                         <td />
                         <td className="text-center">
-                          <Button
-                            href="#"
-                            color="default"
-                            className="btn-round"
-                          >
+                          <Button href="#" color="default" className="btn-round">
                             Current Version
                           </Button>
                         </td>
@@ -130,8 +100,7 @@ class Upgrade extends Component {
                             target="_blank"
                             href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react/?ref=nudr-upgrade"
                             color="info"
-                            className="btn-round"
-                          >
+                            className="btn-round">
                             Upgrade to PRO
                           </Button>
                         </td>
