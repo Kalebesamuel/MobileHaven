@@ -172,7 +172,7 @@ var dashRoutes = [
     path: '/documentation/DevelopmentMat',
     name: 'Documentation',
     icon: 'files_box',
-    component: Code,
+    component: DevelopmentMat,
     layout: '/admin',
     dropdown: [
       {
@@ -195,7 +195,7 @@ var dashRoutes = [
       },
       {
         path: '/documentation/Code',
-        name: 'Code/Rules',
+        name: 'Code Rules',
         component: Code,
         layout: '/admin',
       },
