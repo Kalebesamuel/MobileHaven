@@ -16,7 +16,7 @@ ReactDOM.render(
   <HashRouter>
     <Switch>
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Redirect to="/admin/overview/EvologMotorista" />
+      <Redirect to="/admin/our-culture" />
     </Switch>
   </HashRouter>,
   document.getElementById('root')

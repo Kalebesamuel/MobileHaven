@@ -169,7 +169,7 @@ var dashRoutes = [
     ],
   },
   {
-    path: '/documentation/Code',
+    path: '/documentation/DevelopmentMat',
     name: 'Documentation',
     icon: 'files_box',
     component: Code,
