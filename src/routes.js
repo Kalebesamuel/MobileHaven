@@ -28,6 +28,7 @@ import Components from './views/Documentation/Components.js';
 import ProjectArchitecture from './views/Documentation/ProjectArchitecture.js';
 import Workflow from './views/Documentation/Workflow.js';
 import DevelopmentMat from './views/Documentation/DevelopmentMat';
+import GitWorkflow from './views/Documentation/GitWorkflow';
 import DefinitionOfDone from './views/Documentation/DefinitionOfDone';
 import LogisticDictionary from './views/Documentation/LogisticDictionary';
 
@@ -179,6 +180,12 @@ var dashRoutes = [
         path: '/documentation/DevelopmentMat',
         name: 'Development Mat',
         component: DevelopmentMat,
+        layout: '/admin',
+      },
+      {
+        path: '/documentation/GitWorkflow',
+        name: 'Git Workflow',
+        component: GitWorkflow,
         layout: '/admin',
       },
       {
@@ -537,6 +544,13 @@ var dashRoutes = [
     path: '/documentation/DevelopmentMat',
     name: 'Development Mat',
     component: DevelopmentMat,
+    layout: '/admin',
+    invisible: true,
+  },
+  {
+    path: '/documentation/GitWorkflow',
+    name: 'GitWorkflow',
+    component: GitWorkflow,
     layout: '/admin',
     invisible: true,
   },

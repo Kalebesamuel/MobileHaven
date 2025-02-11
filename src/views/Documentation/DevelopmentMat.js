@@ -1,25 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 
-import {
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardHeader,
-  CardTitle,
-} from "reactstrap";
+import { Row, Col, Card, CardBody, CardHeader, CardTitle } from 'reactstrap';
 
-import PanelHeader from "../../components/PanelHeader/PanelHeader.js";
-import ButtonLink from "../../components/Buttons/ButtonLink";
+import PanelHeader from '../../components/PanelHeader/PanelHeader.js';
+import ButtonLink from '../../components/Buttons/ButtonLink';
 
-import { useScrollToAnchorByParams, useChangeAnchorLink } from "utils";
+import { useScrollToAnchorByParams, useChangeAnchorLink } from 'utils';
 
 //= ==============================================================================================
 function DevelopmentMat() {
   const refDevelopmentMat = useRef(null);
 
   useScrollToAnchorByParams({
-    refDevelopmentMat,    
+    refDevelopmentMat,
   });
 
   const changeAnchorLink = useChangeAnchorLink();
@@ -37,21 +30,15 @@ function DevelopmentMat() {
                   Esteira de Desenvolvimento | Bravo
                 </h5>
 
-                <p className="text-muted">
-                  Mapa da esteira de desenvolvimento
-                </p>
+                <p className="text-muted">Mapa da esteira de desenvolvimento</p>
               </CardHeader>
 
               <CardBody>
-                <p>                                 
-                    <div>
-                        <img
-                            height="30%"
-                            alt="..."
-                            src={require("assets/img/developmentMat.png")}
-                        />
-                    </div>
-                    <br />
+                <p>
+                  <div>
+                    <img height="30%" alt="..." src={require('assets/img/developmentMat.png')} />
+                  </div>
+                  <br />
                 </p>
               </CardBody>
             </Card>
@@ -59,12 +46,11 @@ function DevelopmentMat() {
 
           <Col
             style={{
-              position: "fixed",
-              top: "11%",
-              right: "0px",
-              width: "22%",
-            }}
-          >
+              position: 'fixed',
+              top: '11%',
+              right: '0px',
+              width: '22%',
+            }}>
             <Card className="card-user">
               <CardHeader>
                 <CardTitle>Guia Rápido</CardTitle>
@@ -79,11 +65,9 @@ function DevelopmentMat() {
                     <li>
                       <ButtonLink
                         link="Esteira de Desenvolvimento"
-                        onClick={() =>
-                          changeAnchorLink("refDevelopmentMat")
-                        }
+                        onClick={() => changeAnchorLink('refDevelopmentMat')}
                       />
-                    </li>                    
+                    </li>
                   </ul>
                 </p>
               </CardBody>
